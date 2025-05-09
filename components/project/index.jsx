@@ -183,7 +183,7 @@ const LiveProject=()=>
                     <Link href={project.link} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="w-[50px] h-[50px] rounded-full dark:bg-white/5 bg-primary/90 flex justify-center items-center group">
+                        <TooltipTrigger className="w-[50px] h-[50px] rounded-full dark:bg-white/5 bg-black/70 flex justify-center items-center group">
                           <BsArrowUpRight className="text-white text-2xl dark: dark:group-hover:text-[#ADFF2F] group-hover:text-[#22c55e] transition-all   hover:-rotate-45"/>
                         </TooltipTrigger>
                         <TooltipContent>
