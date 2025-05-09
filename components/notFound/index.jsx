@@ -8,10 +8,10 @@ const PageNotFound = () => {
         404
       </h1>
 
-      <h1 className="text-2xl font-bold dark:text-white mb-4 text-black/90">Page Not Found</h1>
+      <h1 className="text-2xl font-bold dark:text-white mb-4 text-black/70">Page Not Found</h1>
 
       <Link href="/" >
-        <button className="px-6 py-3 gap-3 flex flex-row items-baseline dark:bg-[#ADFF2F] bg-[#22c55e] text-black font-extrabold rounded-lg dark:hover:bg-[#79ad29] hover:bg-[#2bb35d]">
+        <button className="px-6 py-3 gap-3 flex flex-row items-baseline dark:bg-[#ADFF2F] bg-[#22c55e] text-black/70 font-extrabold rounded-lg dark:hover:bg-[#79ad29] hover:bg-[#2bb35d]">
           Go Back Home <FaArrowLeft className='my-3 text-[16px]' />
         </button>
       </Link>
