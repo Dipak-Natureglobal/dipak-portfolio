@@ -11,9 +11,8 @@ const Footer = () => {
       const { theme } = useTheme(); 
   return (
     <>
-     
       <footer className="dark:bg-primary  bg-gray-100 dark:text-white text-black sticky  mt-28  border-t border-stroke ">
-      <div className="w-full border-t border-gray-300 dark:border-strokedark mb-8" />
+      <div className="w-full border-t dark:border-gray-300 border-black/60 dark:border-strokedark mb-8" />
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0 my-4">
           {/* <!-- Footer Top --> */}
           

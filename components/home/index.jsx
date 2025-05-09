@@ -15,7 +15,7 @@ const HomePage=()=>
             <div className=" flex flex-col  xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
               <div className="text-center  xl:text-left order-2 xl:order-none">
                 {/* <span className="text-xl">Software Developer</span> */}
-                <h1 className="h1 mb-6 text-left xl:ml-0 ml-4 dark:text-white text-black/90">
+                <h1 className="h1 mb-6 text-left xl:ml-0 ml-4 dark:text-white text-black/70">
                   Hello  I&#39;m
                   <br />
                   <span className="dark:text-[#ADFF2F] text-[#22c55e] xl:text-7xl lg:text-7xl  md:text-6xl text-[2.5rem]">Dipak Mourya</span>

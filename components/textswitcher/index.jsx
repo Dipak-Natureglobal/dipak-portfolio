@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const roles = ["Software Developer", "Web Developer", "UI/UX Developer", "Frontend Developer"];
+const roles = ["Software Developer","Frontend Developer","Fullstack Developer", "UI/UX Developer"];
 
 const RoleSwitcher = () => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);

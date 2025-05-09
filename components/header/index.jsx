@@ -57,7 +57,7 @@ const Header = () => {
                 <div className="hidden xl:flex items-center gap-8">
                     <Navbar />
                     <Link href="/hireme">
-                        <Button className="relative rounded-md bg-[#22c55e] hover:bg-[#2bb35d] text-white dark:text-black dark:bg-[#e7e7e7] dark:hover:bg-white/60 hover:text-white flex items-center">
+                        <Button className="relative rounded-md bg-black/70 hover:bg-black/80 text-white dark:text-black dark:bg-[#e7e7e7] dark:hover:bg-white/60 hover:text-white flex items-center">
                             Hire Me
                             <span
                                 className="absolute -right-1 -top-1 z-[1] h-2.5 w-2.5 rounded-full 
