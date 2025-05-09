@@ -147,11 +147,11 @@ const LiveProject=()=>
           <div className="flex flex-col xl:flex-row xl:gap-[60px]">
             <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
               <div className="flex flex-col gap-[30px] h-[50%]">
-                <div className="text-5xl leading-none font-extrabold  text-outline dark:text-white text-black/90">{project.num}</div>
-                <h2 className="text-[32px] font-bold leading-none dark:text-white text-black/90 ">{project.title}</h2>
-                <p className=" dark:text-white/60  text-black/90">{project.Description}</p>
+                <div className="text-5xl leading-none font-extrabold  text-outline dark:text-white text-black/70">{project.num}</div>
+                <h2 className="text-[32px] font-bold leading-none dark:text-white text-black/70 ">{project.title}</h2>
+                <p className=" dark:text-white/60  text-black/70">{project.Description}</p>
                 <ul className="flex gap-3">
-                  <span className="dark:text-white text-black/90 font-extrabold">Tech Stack:</span>
+                  <span className="dark:text-white text-black/70 font-extrabold">Tech Stack:</span>
                   {project.stack.map((item,index)=>
                   {
                     return(
@@ -169,7 +169,7 @@ const LiveProject=()=>
                                   </div>
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                  <p className="capitalize text-sm text-black bg-white p-1 mx-1 rounded-md">{item.name}</p>
+                                  <p className="capitalize text-sm text-black/70 bg-white p-1 mx-1 rounded-md">{item.name}</p>
                                 </TooltipContent>
                               </Tooltip>
                             </TooltipProvider>
@@ -179,7 +179,7 @@ const LiveProject=()=>
                 </ul>
                 <div className="border border-white/20 "></div>
                   <div className=" flex flex-row gap-4">
-                    <span className="mt-2 font-extrabold dark:text-white text-black/90">Links:</span>
+                    <span className="mt-2 font-extrabold dark:text-white text-black/70">Links:</span>
                     <Link href={project.link} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
@@ -187,7 +187,7 @@ const LiveProject=()=>
                           <BsArrowUpRight className="text-white text-2xl dark: dark:group-hover:text-[#ADFF2F] group-hover:text-[#22c55e] transition-all   hover:-rotate-45"/>
                         </TooltipTrigger>
                         <TooltipContent>
-                         <p className="bg-white text-black">Site Link</p>
+                         <p className="bg-white text-black/70">Site Link</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
@@ -214,7 +214,7 @@ const LiveProject=()=>
   
                 <div>
                 <WorkSliderBtns conatainStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)]  xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="dark:bg-[#ADFF2F] bg-[#22c55e]  text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" 
+                btnStyles="dark:bg-[#ADFF2F] bg-[#22c55e]  text-black/70 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" 
                 />
                 
                 </div>

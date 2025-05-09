@@ -46,8 +46,8 @@ const info = [
                       <div>{item.icon}</div>
                     </div>
                     <div>
-                      <p>{item.title}</p>
-                      <h3>{item.description}</h3>
+                      <p className="text-black/70 dark:text-white">{item.title}</p>
+                      <h3 className="text-black/70 dark:text-slate-50">{item.description}</h3>
                     </div>
                   </li>
                 ))}

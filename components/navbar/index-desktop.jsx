@@ -36,7 +36,7 @@ const Navbar =()=>
                 return <Link 
                 href={link.path} 
                 key={index} 
-                className={`${link.path === pathname ? "dark:text-[#ADFF2F] text-[#22c55e] border-b-2 dark:border-[#ADFF2F] border-[#22c55e]" : "text-black dark:text-white"} capitalize font-medium hover:text-[#22c55e] dark:hover:text-[#ADFF2F] transition-all`}
+                className={`${link.path === pathname ? "dark:text-[#ADFF2F] text-[#22c55e] border-b-2 dark:border-[#ADFF2F] border-[#22c55e]" : "text-black/70 dark:text-white"} capitalize font-medium hover:text-[#22c55e] dark:hover:text-[#ADFF2F] transition-all`}
               >
                 {link.name}
               </Link>

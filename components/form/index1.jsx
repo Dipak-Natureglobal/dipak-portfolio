@@ -89,7 +89,7 @@ const ContactWEB3Form = ({ title, description }) => {
     <div className="dark:bg-[#27272c] bg-white p-5 rounded-lg shadow-sm">
       <div className="text-left m-7">
         <h1 className="my-3 text-3xl font-semibold dark:text-[#ADFF2F] text-[#22c55e]">{title}</h1>
-        <marquee className="dark:text-white/60 text-black/90">{description}</marquee>
+        <marquee className="dark:text-white/60 text-black/70">{description}</marquee>
       </div>
       <div className="m-7">
         <form onSubmit={handleSubmit} noValidate>
@@ -103,7 +103,7 @@ const ContactWEB3Form = ({ title, description }) => {
 
           <div className="flex flex-col md:flex-row mb-6 space-y-4 md:space-y-0 md:space-x-4">
             <div className="w-full md:w-1/2">
-              <label htmlFor="first_name" className="block mb-2 text-sm dark:text-white text-black/90">
+              <label htmlFor="first_name" className="block mb-2 text-sm dark:text-white text-black/70">
                 First Name
               </label>
               <input
@@ -118,7 +118,7 @@ const ContactWEB3Form = ({ title, description }) => {
               {errors.name && <div className="text-red-500 text-sm mt-1">{errors.name}</div>}
             </div>
             <div className="w-full md:w-1/2">
-              <label htmlFor="last_name" className="block mb-2 text-sm dark:text-white text-black/90">
+              <label htmlFor="last_name" className="block mb-2 text-sm dark:text-white text-black/70">
                 Last Name
               </label>
               <input
@@ -136,7 +136,7 @@ const ContactWEB3Form = ({ title, description }) => {
 
           <div className="flex flex-col md:flex-row mb-6 space-y-4 md:space-y-0 md:space-x-4">
             <div className="w-full md:w-1/2">
-              <label htmlFor="email" className="block mb-2 text-sm dark:text-white text-black/90">
+              <label htmlFor="email" className="block mb-2 text-sm dark:text-white text-black/70">
                 Email Address
               </label>
               <input
@@ -151,7 +151,7 @@ const ContactWEB3Form = ({ title, description }) => {
               {errors.email && <div className="text-red-500 text-sm mt-1">{errors.email}</div>}
             </div>
             <div className="w-full md:w-1/2">
-              <label htmlFor="phone" className="block mb-2 text-sm dark:text-white text-black/90">
+              <label htmlFor="phone" className="block mb-2 text-sm dark:text-white text-black/70">
                 Phone Number
               </label>
               <input
@@ -168,7 +168,7 @@ const ContactWEB3Form = ({ title, description }) => {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="message" className="block mb-2 text-sm dark:text-white text-black/90">
+            <label htmlFor="message" className="block mb-2 text-sm dark:text-white text-black/70">
               Your Message
             </label>
             <textarea
@@ -188,7 +188,7 @@ const ContactWEB3Form = ({ title, description }) => {
   <button
     type="submit"
     disabled={isSubmitted}
-    className="w-32 flex items-center justify-center gap-2 rounded-full font-bold px-1 py-1 text-primary dark:bg-[#ADFF2F] bg-[#22c55e] dark:focus:bg-[#7dae34] focus:bg-[#22c55e] focus:outline-none"
+    className="w-32 flex items-center justify-center gap-2 rounded-full font-bold px-1 py-1 text-black/70 dark:bg-[#ADFF2F] bg-[#22c55e] dark:focus:bg-[#7dae34] focus:bg-[#22c55e] focus:outline-none"
   >
     Send
     <svg
@@ -204,7 +204,7 @@ const ContactWEB3Form = ({ title, description }) => {
     type="reset"
     disabled={isSubmitted}
     onClick={handleReset}
-    className="w-32 flex items-center justify-center gap-2 font-bold px-2 py-2 text-primary dark:bg-[#ADFF2F] bg-[#22c55e] rounded-full dark:focus:bg-[#7dae34] focus:bg-[#22c55e] focus:outline-none"
+    className="w-32 flex items-center justify-center gap-2 font-bold px-2 py-2 text-black/70 dark:bg-[#ADFF2F] bg-[#22c55e] rounded-full dark:focus:bg-[#7dae34] focus:bg-[#22c55e] focus:outline-none"
   >
     Reset
     <svg

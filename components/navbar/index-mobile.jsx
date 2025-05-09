@@ -61,7 +61,7 @@ return (
                         <SheetClose asChild key={index}>
                           <Link
                             href={link.path}
-                            className={`${link.path === pathname && "dark:text-[#ADFF2F] text-[#22c55e] border-b-2 dark:border-[#ADFF2F] border-[#22c55e]"} text-xl capitalize dark:hover:text-[#ADFF2F] hover:text-[#22c55e] transition-all`}
+                            className={`${link.path === pathname && "dark:text-[#ADFF2F] text-[#22c55e] border-b-2 dark:border-[#ADFF2F] border-[#22c55e]"} text-xl capitalize dark:hover:text-[#ADFF2F] hover:text-[#22c55e] transition-all text-black/70 dark:text-slate-50`}
                           >
                             {link.name}
                           </Link>

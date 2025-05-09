@@ -20,18 +20,18 @@ const HomePage=()=>
                   <br />
                   <span className="dark:text-[#ADFF2F] text-[#22c55e] xl:text-7xl lg:text-7xl  md:text-6xl text-[2.5rem]">Dipak Mourya</span>
                 </h1>
-                <p className="max-w-[550px] mb-2 dark:text-white/80 text-black text-left xl:ml-0 ml-5">  I&#39;m a passionate <span><RoleSwitcher/> </span>
+                <p className="max-w-[550px] mb-2 dark:text-white/80 text-black/70 text-left xl:ml-0 ml-5">  I&#39;m a passionate <span><RoleSwitcher/> </span>
                 </p >
-                <p className="max-w-[550px] mb-9 dark:text-white/80 text-black  text-left xl:ml-0 ml-4  ">With expertise in web technologies, I specialize in building responsive web experiences with a focus on intuitive design that enhances user satisfaction and drives business value.</p>
+                <p className="max-w-[550px] mb-9 dark:text-white/80 text-black/70  text-left xl:ml-0 ml-4  ">With expertise in web technologies, I specialize in building responsive web experiences with a focus on intuitive design that enhances user satisfaction and drives business value.</p>
                 <div className="flex flex-col xl:flex-row items-center gap-8">
-                  <Button variant="outline" size="lg" className="uppercase flex items-center gap-2 dark:border-[#ADFF2F] border-[#22c55e] rounded-full  justify-center  dark:text-[#ADFF2F] hover:dark:text-black text-[#22c55e] text-base dark:hover:bg-[#ADFF2F] hover:bg-[#22c55e] hover:text-primary hover:transition-all duration-500">
+                  <Button variant="outline" size="lg" className="uppercase flex items-center gap-2 dark:border-[#ADFF2F] border-[#22c55e] rounded-full  justify-center  dark:text-[#ADFF2F] hover:dark:text-black/70 text-[#22c55e] text-base dark:hover:bg-[#ADFF2F] hover:bg-[#22c55e] hover:text-primary hover:transition-all duration-500">
                     <a href="/assets/resume/dipak.pdf" download="Dipak Mourya CV.pdf" className="flex items-center gap-2">
                       <span className="font-extrabold">Download CV</span>
                       <FiDownload className="text-xl" />
                     </a>
                   </Button>
                   <div className="mb-8 xl:mb-0 ">
-                    <Social containerStyles="flex gap-6" iconStyles="  w-10 h-10 border dark:border-[#ADFF2F] border-[#22c55e] rounded-full flex justify-center items-center dark:text-[#ADFF2F] text-[#22c55e] text-base hover:dark:text-black dark:hover:bg-[#ADFF2F] hover:bg-[#22c55e] hover:text-primary hover:transition-all duration-500"/>
+                    <Social containerStyles="flex gap-6" iconStyles="  w-10 h-10 border dark:border-[#ADFF2F] border-[#22c55e] rounded-full flex justify-center items-center dark:text-[#ADFF2F] text-[#22c55e] text-base hover:dark:text-black/70 dark:hover:bg-[#ADFF2F] hover:bg-[#22c55e] hover:text-primary hover:transition-all duration-500"/>
                   </div>
                 </div>
               </div>
@@ -57,7 +57,7 @@ const HomePage=()=>
                 d="M19 9l-7 7-7-7"
                 className="dark:text-[#ADFF2F] text-[#22c55e] font-extrabold"/>
                 </svg>
-                <span className="dark:text-white/60 text-black">Scroll Down</span>
+                <span className="dark:text-white/60 text-black/70">Scroll Down</span>
               </div>
          
               </div>
@@ -78,17 +78,17 @@ const HomePage=()=>
             d="M19 9l-7 7-7-7"
             className="dark:text-[#ADFF2F] text-[#22c55e] font-extrabold"/>
             </svg>
-            <span className="dark:text-white/60 text-black">Scroll Down</span>
+            <span className="dark:text-white/60 text-black/70">Scroll Down</span>
           </div>
          
           <div className="container mx-auto h-full mt-14 xl:24">
             <div className=" flex flex-col  xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
               <div className="text-center  xl:text-left order-2 xl:order-none">
-                <p className="max-w-[610px] mb-6 dark:text-white/80 text-black text-left xl:ml-0 ml-4">
+                <p className="max-w-[610px] mb-6 dark:text-white/80 text-black/70 text-left xl:ml-0 ml-4">
                 Hi, I am Dipak Mourya, a passionate Software Developer with over a year of experience in real-time projects. I continuously evolve my skills and embrace new technologies. With a degree in Computer Science Engineering, I enhance my efficiency in software development. Currently, I’m pursuing an <span className="dark:text-[#ADFF2F] text-[#22c55e] font-bold"> Master of Business Administration (MBA)</span> in Business Analytics, merging my technical expertise with business insight for impactful results.
                 </p>
                 <Link href='/about' className="xl:flex hidden">
-                    <Button className="dark:bg-[#ADFF2F] bg-[#22c55e] hover:bg-[#2bb35d]  dark:hover:bg-[#ADFF2F] font-bold gap-2">
+                    <Button className="dark:bg-[#ADFF2F] bg-[#22c55e] hover:bg-[#2bb35d] text-black/70  dark:hover:bg-[#ADFF2F] font-bold gap-2">
               
                      <span className="hover:pr-3 duration-500 flex">Discover More</span>
                       <svg
@@ -102,7 +102,7 @@ const HomePage=()=>
                   </Link>
                 <div className=" flex flex-row gap-3 items-center justify-center xl:hidden">
                   <Link href='/about'>
-                    <Button className="dark:bg-[#ADFF2F] bg-[#22c55e]  dark:hover:bg-[#ADFF2F] hover:bg-[#2bb35d] font-bold gap-2">
+                    <Button className="dark:bg-[#ADFF2F] bg-[#22c55e] text-black/70  dark:hover:bg-[#ADFF2F] hover:bg-[#2bb35d] font-bold gap-2">
               
                      <span className="hover:pr-3 duration-500 flex">Discover More</span>
                       <svg
@@ -115,7 +115,7 @@ const HomePage=()=>
                     </Button>
                   </Link>
                   <Link href='/hireme'>
-                    <Button className="dark:bg-[#ADFF2F] bg-[#22c55e]  dark:hover:bg-[#ADFF2F] hover:bg-[#2bb35d] font-bold gap-2 ">
+                    <Button className="dark:bg-[#ADFF2F] bg-[#22c55e] text-black/70  dark:hover:bg-[#ADFF2F] hover:bg-[#2bb35d] font-bold gap-2 ">
                       <span className="hover:pr-3 duration-500 flex">Hire Me</span>
                       <svg
                       width="14"

@@ -241,7 +241,7 @@ const About=()=>
                     />
                     
                     </h3>
-                    <p className="xl:min-w-[600px] min-w-[300px] dark:dark:text-white/60  text-black/90 mx-auto xl:mx-0 text-left">{experience.description}</p>
+                    <p className="xl:min-w-[600px] min-w-[300px] dark:dark:text-white/60  text-black/70 mx-auto xl:mx-0 text-left">{experience.description}</p>
                     <ScrollArea className="h-[400px] overflow-auto">
                       <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                         {experience.items.map((item,index)=>
@@ -252,7 +252,7 @@ const About=()=>
                             <h3 className="text-[15px] max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
                             <div className="flex items-center gap-3">
                               <span className="w-[6px] h-[6px] rounded-full dark:bg-[#ADFF2F] bg-[#22c55e]"></span>
-                              <p className="dark:dark:text-white/60  text-black/90">{item.company}</p>
+                              <p className="dark:dark:text-white/60  text-black/70">{item.company}</p>
                             </div>
                             </li>
                           );
@@ -276,7 +276,7 @@ const About=()=>
                   />
                   
                   </h3>
-                  <p className="xl:min-w-[600px] min-w-[300px] dark:text-white/60 text-black/90 mx-auto xl:mx-0 text-left">{education.description}</p>
+                  <p className="xl:min-w-[600px] min-w-[300px] dark:text-white/60 text-black/70 mx-auto xl:mx-0 text-left">{education.description}</p>
                   <ScrollArea className="h-[400px] overflow-auto">
                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                       {education.items.map((item,index)=>
@@ -287,7 +287,7 @@ const About=()=>
                           <h3 className="text-[13.5px] max-w-[300px] min-h-[70px] text-center lg:text-left">{item.degree}</h3>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full dark:bg-[#ADFF2F] bg-[#22c55e]"></span>
-                            <p className="dark:text-white/60 text-black/90">{item.institution}</p>
+                            <p className="dark:text-white/60 text-black/70">{item.institution}</p>
                           </div>
                           </li>
                         );
@@ -310,7 +310,7 @@ const About=()=>
                     className=" block"
                     />
                     </h3>
-                    <p className="dark:text-white/60 text-black/90">{skillsData.description}</p>
+                    <p className="dark:text-white/60 text-black/70">{skillsData.description}</p>
                   </div>
                   {/* <ScrollArea className="h-[400px] overflow-auto"> */}
                   <ul className="grid justify-center items-center xl:grid-cols-4 grid-cols-3 mx-10 xl:gap-[30px] gap-[50px]">
@@ -330,7 +330,7 @@ const About=()=>
                                 />
                                 </div>
                               </TooltipTrigger>
-                              <TooltipContent className="dark:bg-slate/50 dark:text-black/90 " >
+                              <TooltipContent className="dark:bg-slate/50 dark:text-black/70 " >
                                 <p className="capitalize">{item.name}</p>
                               </TooltipContent>
                             </Tooltip>
@@ -356,7 +356,7 @@ const About=()=>
                     className=" block"
                     />
                     </h3>
-                    <p className="maxw[600px] dark:text-white/60 text-black/90 mx-auto xl:mx-0">{about.description}</p>
+                    <p className="maxw[600px] dark:text-white/60 text-black/70 mx-auto xl:mx-0">{about.description}</p>
                     <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">{about.info.map((item,index)=>
                     {
                       return(

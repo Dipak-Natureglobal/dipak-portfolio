@@ -62,13 +62,13 @@ const services = () => {
             return (
               <div key={index} className="flex-1 flex-col  justify-center gap-6 group">
                 <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extralight text-outline  transition-all duration-500 text-black/90 dark:text-white">
+                  <div className="text-5xl font-extralight text-outline  transition-all duration-500 text-black/70 dark:text-white">
                     {item.num}
                   </div>
                   <Link
                     href={item.href}
                     className="xl:w-[60px] xl:h-[60px] w-[50px] h-[50px] rounded-full 
-                  bg-black/90 text-black/90 dark:bg-white
+                  bg-black/70 text-black/70 dark:bg-white
                   group-hover:bg-[#22c55e] dark:group-hover:bg-[#ADFF2F] 
                     transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                   >
@@ -76,8 +76,8 @@ const services = () => {
                   </Link>
                 </div>
 
-                <h2 className="mb-5 mt-5  text-[32px] font-bold leading-none dark:text-white text-black/90 dark:group-hover:text-[#ADFF2F] group-hover:text-[#22c55e] transition-all duration-500">{item.title}</h2>
-                <p className="mb-5 dark:text-white/60 text-black/90">{item.description}</p>
+                <h2 className="mb-5 mt-5  text-[32px] font-bold leading-none dark:text-white text-black/70 dark:group-hover:text-[#ADFF2F] group-hover:text-[#22c55e] transition-all duration-500">{item.title}</h2>
+                <p className="mb-5 dark:text-white/60 text-black/70">{item.description}</p>
                 <div className="border-b dark:border-white/20 border-black/90 w-full"></div>
               </div>
             );

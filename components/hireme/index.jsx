@@ -40,8 +40,8 @@ const HireMe =()=>
                 {info.map((item, index) => (
                   <li key={index} className="flex items-center gap-6">
                     <div>
-                      <p className="text-lg dark:text-white/60 text-black/90"><span className="text-3xl my-1 dark:text-[#ADFF2F] text-[#22c55e]">.</span>{item.title}</p>
-                      <h3 className="text-[14px] text-left ml-5 my-2">{item.description}</h3>
+                      <p className="text-lg dark:text-white text-black/70"><span className="text-3xl my-1 dark:text-[#ADFF2F] text-[#22c55e]">.</span>{item.title}</p>
+                      <h3 className="text-[14px] text-left ml-5 my-2 dark:text-white text-black/70">{item.description}</h3>
                     </div>
                   </li>
                 ))}

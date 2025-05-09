@@ -6,7 +6,7 @@
 {
     body
     {
-@apply font-primary dark:bg-primary dark:text-white bg-gray-100 text-primary leading-loose;
+@apply font-primary dark:bg-primary dark:text-white bg-gray-100 text-black/70 leading-loose;
     }
     .h1
     {
