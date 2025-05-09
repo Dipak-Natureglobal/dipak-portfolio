@@ -197,6 +197,14 @@ const about={
         icon:"/assets/resume/firebase.png",
         name: "Firebase",
       },
+      {
+        icon:"/assets/resume/vercel.png",
+        name: "Vercel",
+      },
+      {
+        icon:"/assets/resume/express.png",
+        name: "Express.js",
+      },
       
        ]
   }
@@ -322,7 +330,7 @@ const About=()=>
                                 />
                                 </div>
                               </TooltipTrigger>
-                              <TooltipContent>
+                              <TooltipContent className="dark:bg-slate/50 dark:text-black/90 " >
                                 <p className="capitalize">{item.name}</p>
                               </TooltipContent>
                             </Tooltip>
