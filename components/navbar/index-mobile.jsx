@@ -72,7 +72,7 @@ const MobileNavbar = () => {
               );
             })}
           </nav>
-          <button
+          {/* <button
             onClick={toggleTheme}
             className="mt-10 self-center p-3 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition"
           >
@@ -81,7 +81,7 @@ const MobileNavbar = () => {
             ) : (
               <Sun size={24} />
             )}
-          </button>
+          </button> */}
         </SheetContent>
       </Sheet>
     </>

@@ -6,11 +6,13 @@ import Navbar from "../navbar/index-desktop";
 import MobileNavbar from "../navbar/index-mobile";
 import Image from "next/image";
 import { useTheme } from "../theme-provider/page";
+import { MoonStar, Sun } from "lucide-react";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const { theme } = useTheme();
-    
+
+    const { theme, toggleTheme } = useTheme();
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
@@ -42,7 +44,7 @@ const Header = () => {
                 <Link href="/">
 
                     <Image
-                     src={theme === "dark" ? "/assets/profile/logo.png" : "/assets/profile/light-logo.png"}
+                        src={theme === "dark" ? "/assets/profile/logo.png" : "/assets/profile/light-logo.png"}
                         alt="logo"
                         width={60}
                         height={60}
@@ -73,7 +75,21 @@ const Header = () => {
 
 
                 {/* Mobile Navbar */}
-                <div className="xl:hidden">
+                <div className="xl:hidden flex gap-6 items-center">
+                    <button
+                        onClick={toggleTheme}
+                        className={`ml-4 p-2 transition ${theme === "light"
+                                ? "rounded-[50px] border border-black/70 hover:bg-gray-200"
+                                : "rounded-full dark:hover:bg-gray-700 border border-white"
+                            }`}
+                    >
+                        {theme === "light" ? (
+                            <MoonStar size={20} />
+                        ) : (
+                            <Sun size={20} />
+                        )}
+                    </button>
+
                     <MobileNavbar />
                 </div>
             </div>
