@@ -21,6 +21,10 @@ const links=[
         path:"/services"
     },
     {
+        name: "Posts",
+        path:"/posts"
+    },
+    {
         name: "Contact",
         path:"/contact"
     }
