@@ -9,7 +9,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: '/opengraph/profile/contact.png',
+        url: 'assets/opengraph/contact.png',
         width: 1200,
         height: 630,
         alt: 'Dipak Dev Contact Image',
