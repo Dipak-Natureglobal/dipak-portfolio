@@ -134,29 +134,43 @@ const PostPage = () => {
       {/* Pagination */}
       {filteredPosts.length > postsPerPage && (
         <div className="mt-10 flex justify-center items-center gap-2 flex-wrap">
-          {currentPage > 1 && (
-            <button onClick={() => handlePageChange(currentPage - 1)} className="px-3 py-2 bg-gray-200 rounded hover:bg-gray-300 flex items-center gap-1 text-gray-700">
-              <ChevronLeft size={16} /> Previous
-            </button>
-          )}
 
+          {/* Previous button */}
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className={`w-10 h-10 flex items-center justify-center rounded-full ${currentPage === 1 ? "bg-gray-300 cursor-not-allowed" : "bg-gray-200 hover:bg-gray-300"
+              } text-gray-700`}
+          >
+            <ChevronLeft size={16} />
+          </button>
+
+          {/* Page number buttons */}
           {[...Array(totalPages)].map((_, i) => (
             <button
               key={i}
               onClick={() => handlePageChange(i + 1)}
-              className={`px-3 py-2 rounded ${currentPage === i + 1 ? "dark:bg-[#ADFF2F] bg-[#22c55e] text-gray-700" : "bg-gray-200 hover:bg-gray-300 text-gray-700"}`}
+              className={`px-3 py-2 rounded ${currentPage === i + 1
+                  ? "dark:bg-[#ADFF2F] bg-[#22c55e] text-gray-700"
+                  : "bg-gray-200 hover:bg-gray-300 text-gray-700"
+                }`}
             >
               {i + 1}
             </button>
           ))}
 
-          {currentPage < totalPages && (
-            <button onClick={() => handlePageChange(currentPage + 1)} className="px-3 py-2 bg-gray-200 rounded hover:bg-gray-300 flex items-center gap-1 text-gray-700">
-              Next <ChevronRight size={16} />
-            </button>
-          )}
+          {/* Next button */}
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className={`w-10 h-10 flex items-center justify-center rounded-full ${currentPage === totalPages ? "bg-gray-300 cursor-not-allowed" : "bg-gray-200 hover:bg-gray-300"
+              } text-gray-700`}
+          >
+            <ChevronRight size={16} />
+          </button>
         </div>
       )}
+
     </div>
   );
 };
