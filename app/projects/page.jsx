@@ -10,7 +10,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'assets/opengraph/project.png',
+        url: 'https://dipakdev.in/assets/opengraph/project.png',
         width: 1200,
         height: 630,
         alt: 'Dipak Dev Project Image',
