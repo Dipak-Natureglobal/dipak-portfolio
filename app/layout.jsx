@@ -20,6 +20,25 @@ const JetbrainsMono=JetBrains_Mono(
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+        <head>
+        {/* Prevent light flash on reload */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const theme = localStorage.getItem("theme");
+                  if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                    document.documentElement.classList.add("dark");
+                  } else {
+                    document.documentElement.classList.remove("dark");
+                  }
+                } catch (_) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={JetbrainsMono.variable} 
       >
