@@ -134,14 +134,14 @@ const PostPage = () => {
       {/* Pagination */}
       {filteredPosts.length > postsPerPage && (
         <div className="mt-10 flex justify-center items-center gap-2 flex-wrap">
-        
-            <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              className={`w-10 h-10 flex items-center justify-center rounded-full ${currentPage === 1 ? "bg-gray-300 cursor-not-allowed" : "bg-gray-200 hover:bg-gray-300"
-                } text-gray-700`}
-            >
-              <ChevronLeft size={16} />
-            </button>
+
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            className={`w-10 h-10 flex items-center justify-center rounded-full ${currentPage === 1 ? "bg-gray-300 cursor-not-allowed opacity-50 pointer-events-none" : "bg-gray-200 hover:bg-gray-300"
+              } text-gray-700`}
+          >
+            <ChevronLeft size={16} />
+          </button>
 
           {[...Array(totalPages)].map((_, i) => (
             <button
@@ -153,13 +153,13 @@ const PostPage = () => {
             </button>
           ))}
 
-            <button
-              onClick={() => handlePageChange(currentPage + 1)}
-              className={`w-10 h-10 flex items-center justify-center rounded-full ${currentPage === totalPages ? "bg-gray-300 cursor-not-allowed" : "bg-gray-200 hover:bg-gray-300"
-                } text-gray-700`}
-            >
-              <ChevronRight size={16} />
-            </button>
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            className={`w-10 h-10 flex items-center justify-center rounded-full ${currentPage === totalPages ? "bg-gray-300 cursor-not-allowed opacity-50 pointer-events-none" : "bg-gray-200 hover:bg-gray-300"
+              } text-gray-700`}
+          >
+            <ChevronRight size={16} />
+          </button>
         </div>
       )}
     </div>
