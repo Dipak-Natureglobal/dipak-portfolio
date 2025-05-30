@@ -48,7 +48,7 @@ const MobileNavbar = () => {
         </SheetTrigger>
         <SheetContent className="flex flex-col">
           <SheetClose asChild>
-            <Link href="/">
+            {/* <Link href="/"> */}
               <Image
                 src={theme === "dark" ? "/assets/profile/logo.png" : "/assets/profile/light-logo.png"}
                 alt="logo"
@@ -56,9 +56,9 @@ const MobileNavbar = () => {
                 height={50}
                 className="w-14  mb-36 block"
               />
-            </Link>
+            {/* </Link> */}
           </SheetClose>
-          <nav className='flex flex-col justify-center items-center gap-8'>
+          <nav className='flex flex-col justify-center items-center gap-6'>
             {links.map((link, index) => {
               return (
                 <SheetClose asChild key={index}>
