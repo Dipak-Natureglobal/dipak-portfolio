@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 
-import { MessageSquare, X, Mail, ArrowRight } from "lucide-react"
+import { MessageSquare, X, Mail, ArrowRight, MessageCircleMore, Inbox, MessageSquareText } from "lucide-react"
 import Image from "next/image"
 
 const EnhancedContactButton = () => {
@@ -56,7 +56,8 @@ const EnhancedContactButton = () => {
       <div className="fixed  bottom-4 right-4 sm:bottom-6 sm:right-6  z-50"  >
         <button
           onClick={togglePopup}
-          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] w-16 h-16 rounded-full bg-[#ff6060] hover:bg-[#c23939] text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] w-16 h-16 rounded-full bg-gradient-to-r from-[#2eb329] to-[#6df7ee] 
+             dark:from-[#2eb329] dark:to-[#ecf76d]   hover:opacity-90  text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center"
         >
           {isPopupOpen ? (
             <X
@@ -64,8 +65,8 @@ const EnhancedContactButton = () => {
               className="transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-90"
             />
           ) : (
-            <MessageSquare
-              size={24}
+            <MessageCircleMore    
+              size={38}
               className="transition-opacity duration-300 ease-in-out opacity-100"
             />
           )}
