@@ -122,11 +122,7 @@ const Footer = () => {
                    <FaLinkedinIn size={"25px"} className="dark:hover:fill-[#ADFF2F] hover:text-[#22c55e]"/>
                   </a>
                 </li>
-                <li>
-                <a href="https://join.skype.com/invite/ugfL9xm7x8ta" target="_blank" rel="noopener noreferrer">
-                    <FaSkype size={"25px"} className="dark:hover:fill-[#ADFF2F] hover:text-[#22c55e]"/>
-                </a>
-                </li>
+                
                 <li>
                 <a href="https://t.me/Dipak_15" target="_blank" rel="noopener noreferrer">
                     <FaTelegram size={"25px"} className="dark:hover:fill-[#ADFF2F] hover:text-[#22c55e]"/>

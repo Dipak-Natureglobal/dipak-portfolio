@@ -111,13 +111,13 @@ const ServiceCard = ({ service }) => {
 
 const ServicesSection = () => {
   return (
-    <section className="mb-14  mt-36">
+    <section className="  mt-36">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.9 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="4 text-2xl md:text-4xl font-bold text-black/70 dark:text-white mb-4">
             Solutions I Provide
