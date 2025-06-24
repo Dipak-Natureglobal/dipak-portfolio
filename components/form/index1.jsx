@@ -110,7 +110,7 @@ const ContactWEB3Form = ({ title, description }) => {
                 type="text"
                 name="name"
                 id="first_name"
-                className={`w-full px-3 py-1 dark:bg-primary bg-white border-2 rounded-md ${
+                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${
                   errors.name ? "border-red-500" : "dark:border-primary border-gray-500"
                 } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
                 onInput={() => handleInputChange("name")}
@@ -125,7 +125,7 @@ const ContactWEB3Form = ({ title, description }) => {
                 type="text"
                 name="last_name"
                 id="last_name"
-                className={`w-full px-3 py-1 dark:bg-primary bg-white border-2 rounded-md ${
+                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${
                   errors.last_name ? "border-red-500" : "dark:border-primary border-gray-500"
                 } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
                 onInput={() => handleInputChange("last_name")}
@@ -143,7 +143,7 @@ const ContactWEB3Form = ({ title, description }) => {
                 type="email"
                 name="email"
                 id="email"
-                className={`w-full px-3 py-1 dark:bg-primary bg-white border-2 rounded-md ${
+                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${
                   errors.email ? "border-red-500" : "dark:border-primary border-gray-500"
                 } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
                 onInput={() => handleInputChange("email")}
@@ -158,7 +158,7 @@ const ContactWEB3Form = ({ title, description }) => {
                 type="text"
                 name="phone"
                 id="phone"
-                className={`w-full px-3 py-1 dark:bg-primary bg-white border-2 rounded-md ${
+                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${
                   errors.phone ? "border-red-500" : "dark:border-primary border-gray-500"
                 } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
                 onInput={() => handleInputChange("phone")}
@@ -175,8 +175,9 @@ const ContactWEB3Form = ({ title, description }) => {
               rows="4"
               name="message"
               id="message"
+              style={{ minHeight: "8rem" }}
               placeholder="Type your message here"
-              className={`w-full px-3 py-1 dark:bg-primary bg-white border-2 rounded-md ${
+              className={`w-full px-3 resize-y py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${
                 errors.message ? "border-red-500" : "dark:border-primary border-gray-500"
               } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
               onInput={() => handleInputChange("message")}
