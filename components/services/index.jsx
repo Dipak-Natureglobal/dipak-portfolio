@@ -111,7 +111,7 @@ const ServiceCard = ({ service }) => {
 
 const ServicesSection = () => {
   return (
-    <section className="  mt-36">
+    <section className="min-h-[80vh]  mt-36">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
