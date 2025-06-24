@@ -9,15 +9,15 @@ import Image from "next/image";
 import Stats from "../../components/stats/page";
 const HomePage = () => {
   return (
-    <section className="min-h-[80vh] xl:my-28 mt-36 ">
+    <section className="min-h-[80vh] xl:mt-24  mt-32">
       <div className="container mx-auto h-full ">
-        <div className=" flex flex-col  xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+        <div className=" flex flex-col  xl:flex-row items-center justify-between xl:pt-8 xl:pb-16">
           <div className="text-center  xl:text-left order-2 xl:order-none ">
             {/* <span className="text-xl">Software Developer</span> */}
-            <h1 className="h1 mb-6 text-left xl:ml-0 ml-4 dark:text-white text-black/70">
+            <h1 className="h1 mb-4 text-left xl:ml-0 ml-4 dark:text-white text-black/70 text-[40px] xl:text-[80px]">
               Hello  I&#39;m
               <br />
-              <span className="dark:text-[#ADFF2F] text-[#22c55e] xl:text-7xl lg:text-7xl  md:text-6xl text-[2.5rem]">Dipak Mourya</span>
+              <span className="dark:text-[#ADFF2F] text-[#22c55e] xl:text-7xl lg:text-7xl  md:text-6xl  text-[40px] xl:text-[80px]">Dipak Mourya</span>
             </h1>
             <p className="max-w-[550px] mb-2 dark:text-white/80 text-black/70 text-left xl:ml-0 ml-5">  I&#39;m a passionate <span><RoleSwitcher /> </span>
             </p >
@@ -37,12 +37,12 @@ const HomePage = () => {
           {/* <div className="order-1 xl:order-none mb-8 xl:mb-0"><Profile/></div> */}
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Image
-              width={400}
-              height={400}
               src="/assets/profile/homeprofile.png"
               alt="logo"
-              className="rounded-xl mb-2 xl:shadow-none shadow-2xl xl:dark:shadow-[#ADFF2F]/30 dark:shadow-[#ADFF2F]/30 shadow-[#22c55e]/60 "
-
+              className="rounded-xl mb-2 w-[17rem] h-[17rem] shadow-none md:w-[25rem] md:h-[25rem] xl:shadow-none xl:dark:shadow-[#ADFF2F]/30 dark:shadow-[#ADFF2F]/30 shadow-[#22c55e]/60"
+              width={0}
+              height={0}
+              sizes="100vw"
             />
             <div className="container mx-auto   justify-center items-center xl:flex hidden flex-col  ">
               <svg
@@ -97,7 +97,8 @@ const HomePage = () => {
                   width="14"
                   height="14"
                   viewBox="0 0 14 14"
-                  xmlns="http://www.w3.org/2000/svg">
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-vblack/70 fill-current">
                   <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
                 </svg>
               </Button>
@@ -111,7 +112,8 @@ const HomePage = () => {
                     width="14"
                     height="14"
                     viewBox="0 0 14 14"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="text-vblack/70 fill-current">
                     <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
                   </svg>
                 </Button>
@@ -123,7 +125,8 @@ const HomePage = () => {
                     width="14"
                     height="14"
                     viewBox="0 0 14 14"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="text-vblack/70 fill-current">
                     <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
                   </svg>
                 </Button>
@@ -135,13 +138,13 @@ const HomePage = () => {
 
         </div>
       </div>
-      <div className="container mx-auto h-full">
-        <div className="w-full flex items-center justify-center bg-gray-100 dark:bg-primary px-0 py-8">
+      <div className="container mx-auto h-full xl:mt-0 mt-4">
+        <div className="w-full flex items-center justify-center bg-gray-100 dark:bg-primary px-0 py-6">
           <div className="text-left max-w-6xl w-full bg-gray-100 dark:bg-[#27272c] rounded-2xl shadow-2xl p-8 md:p-16 border dark:border-[#ADFF2F]/40 border-[#22c55e]/40">
             <h2 className="text-lg md:text-4xl font-extrabold mb-10 text-[#22c55e] dark:text-[#ADFF2F] text-left">
               How to Become a Good Coder in the Modern Era?
             </h2>
-            <p className="text-left text-sm md:text-lg dark:text-white/80 text-black/70 mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-left text-sm md:text-[16px] dark:text-white/80 text-black/70 mb-12 max-w-4xl mx-auto leading-relaxed">
               Writing code that works is just the start. To be a great coder, write
               <span className="font-semibold text-[#22c55e] dark:text-[#ADFF2F]"> optimized, clean, and efficient</span> code that scales and solves real problems.<br /><br />
               Keep learning and use modern AI-powered tools to boost your skills and productivity.
@@ -193,7 +196,7 @@ const HomePage = () => {
               ))}
             </div>
 
-            <p className="text-left xl:text-lg text-sm dark:text-white/80 text-black/70 max-w-4xl mx-auto mt-14">
+            <p className="text-left md:text-[16px] text-sm dark:text-white/80 text-black/70 max-w-4xl mx-auto mt-14">
               The future belongs to those who adapt. Many more powerful AI tools are available —
               <span className="font-semibold text-[#22c55e] dark:text-[#ADFF2F]"> explore and grow.</span><br /><br />
             </p>
