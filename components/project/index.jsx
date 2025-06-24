@@ -179,11 +179,11 @@ const LiveProject=()=>
                 </ul>
                 <div className="border border-white/20 "></div>
                   <div className=" flex flex-row gap-4">
-                    <span className="mt-2 font-extrabold dark:text-white text-black/70">Links:</span>
+                    <span className="mt-1 font-extrabold dark:text-white text-black/70">Links:</span>
                     <Link href={project.link} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="w-[50px] h-[50px] rounded-full dark:bg-white/5 bg-black/70 flex justify-center items-center group">
+                        <TooltipTrigger className="w-[42px] h-[42px] rounded-full dark:bg-white/5 bg-black/70 flex justify-center items-center group">
                           <BsArrowUpRight className="text-white text-2xl dark: dark:group-hover:text-[#ADFF2F] group-hover:text-[#22c55e] transition-all   hover:-rotate-45"/>
                         </TooltipTrigger>
                         <TooltipContent>

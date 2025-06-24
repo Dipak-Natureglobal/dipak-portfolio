@@ -40,9 +40,9 @@ const HomePage = () => {
               src="/assets/profile/homeprofile.png"
               alt="logo"
               className="rounded-xl mb-2 w-[17rem] h-[17rem] shadow-none md:w-[25rem] md:h-[25rem] xl:shadow-none xl:dark:shadow-[#ADFF2F]/30 dark:shadow-[#ADFF2F]/30 shadow-[#22c55e]/60"
-              width={0} 
-              height={0} 
-              sizes="100vw" 
+              width={0}
+              height={0}
+              sizes="100vw"
             />
             <div className="container mx-auto   justify-center items-center xl:flex hidden flex-col  ">
               <svg
@@ -97,7 +97,8 @@ const HomePage = () => {
                   width="14"
                   height="14"
                   viewBox="0 0 14 14"
-                  xmlns="http://www.w3.org/2000/svg">
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-vblack/70 fill-current">
                   <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
                 </svg>
               </Button>
@@ -111,7 +112,8 @@ const HomePage = () => {
                     width="14"
                     height="14"
                     viewBox="0 0 14 14"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="text-vblack/70 fill-current">
                     <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
                   </svg>
                 </Button>
@@ -123,7 +125,8 @@ const HomePage = () => {
                     width="14"
                     height="14"
                     viewBox="0 0 14 14"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="text-vblack/70 fill-current">
                     <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
                   </svg>
                 </Button>
@@ -193,7 +196,7 @@ const HomePage = () => {
               ))}
             </div>
 
-            <p className="text-left xl:text-lg text-sm dark:text-white/80 text-black/70 max-w-4xl mx-auto mt-14">
+            <p className="text-left md:text-[16px] text-sm dark:text-white/80 text-black/70 max-w-4xl mx-auto mt-14">
               The future belongs to those who adapt. Many more powerful AI tools are available —
               <span className="font-semibold text-[#22c55e] dark:text-[#ADFF2F]"> explore and grow.</span><br /><br />
             </p>

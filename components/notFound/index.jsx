@@ -12,7 +12,7 @@ const PageNotFound = () => {
 
       <Link href="/" >
         <button className="px-6 py-3 gap-3 flex flex-row items-baseline dark:bg-[#ADFF2F] bg-[#22c55e] text-black/70 font-extrabold rounded-lg dark:hover:bg-[#79ad29] hover:bg-[#2bb35d]">
-          Go Back Home <FaArrowLeft className='my-3 text-[16px]' />
+          Go Back Home <FaArrowLeft className='my-3 text-[16px]  ctext-vblack/70 fill-current' />
         </button>
       </Link>
     </div>
