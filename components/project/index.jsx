@@ -156,7 +156,7 @@ const LiveProject = () => {
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0, transition: { delay: 1.1, duration: 0.6 } }}
-            className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent px-2 mt-10"
+            className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent px-2 xl:mt-10 md:mt-10  mt-16"
           >
             My Projects
           </motion.h1>
