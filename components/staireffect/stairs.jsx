@@ -45,8 +45,8 @@ const Stairs = () => {
                     }}
                     className={`h-full w-full ${
                         theme === "dark" 
-                          ? "bg-gradient-to-b from-[#ADFF2F] to-primary" 
-                          : "bg-gradient-to-b from-[#22c55e] to-white"
+                          ? "bg-gradient-to-b from-[#ADFF2F] to-[#22c55e]" 
+                          : "bg-gradient-to-b from-[#22c55e] to-[#16a34a]"
                       } relative`}
                 />
             ))}
