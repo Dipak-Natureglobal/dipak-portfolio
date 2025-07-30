@@ -1,10 +1,10 @@
 "use client";
-import {motion}  from "framer-motion"
-import React,{useState} from "react";
-import { Swiper,SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion"
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"
-import {BsArrowUpRight} from "react-icons/bs"
-import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger } from "@radix-ui/react-tooltip";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@radix-ui/react-tooltip";
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "../../components/ui/WorkSliderBtns"
@@ -132,99 +132,166 @@ const projects =[
     }
   
   ];
-const LiveProject=()=>
-{
-    
-    const [project, setProject]=useState(projects[0]);
-    const handleSliderChange=(swiper)=>
-    {
-      const currentIndex=swiper.activeIndex;
-      setProject(projects[currentIndex]);
-    }
-      return (
-      <motion.div initial={{opacity:0}}  animate={{opacity:1,transition:{delay:1.0,duration:0.4, ease:'easeIn'}}}  className="min-h-[80vh] flex flex-col justify-center mt-32 xl:px-0">
-        <div  className=" container mx-auto">
-          <div className="flex flex-col xl:flex-row xl:gap-[60px]">
-            <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-              <div className="flex flex-col gap-[30px] h-[50%]">
-                <div className="text-5xl leading-none font-extrabold  text-outline dark:text-white text-black/70">{project.num}</div>
-                <h2 className="text-[32px] font-bold leading-none dark:text-white text-black/70 ">{project.title}</h2>
-                <p className=" dark:text-white/60  text-black/70">{project.Description}</p>
-                <ul className="flex gap-3">
-                  <span className="dark:text-white text-black/70 font-extrabold">Tech Stack:</span>
-                  {project.stack.map((item,index)=>
-                  {
-                    return(
-                      <li key={index} className="xl:text-lg flex text-xs  text-[#ADFF2F]">
-                        <TooltipProvider>
-                              <Tooltip>
-                                <TooltipTrigger >
-                                  <div>
-                                  <Image 
-                                  width={30} 
-                                  height={30} 
-                                  src={item.link} 
-                                  alt="logo" 
-                                  />
-                                  </div>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                  <p className="capitalize text-sm text-black/70 bg-white p-1 mx-1 rounded-md">{item.name}</p>
-                                </TooltipContent>
-                              </Tooltip>
-                            </TooltipProvider>
-                      </li>
-                    )
-                  })}
-                </ul>
-                <div className="border border-white/20 "></div>
-                  <div className=" flex flex-row gap-4">
-                    <span className="mt-1 font-extrabold dark:text-white text-black/70">Links:</span>
-                    <Link href={project.link} target="_blank">
-                    <TooltipProvider delayDuration={100}>
-                      <Tooltip>
-                        <TooltipTrigger className="w-[42px] h-[42px] rounded-full dark:bg-white/5 bg-black/70 flex justify-center items-center group">
-                          <BsArrowUpRight className="text-white text-2xl dark: dark:group-hover:text-[#ADFF2F] group-hover:text-[#22c55e] transition-all   hover:-rotate-45"/>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                         <p className="bg-white text-black/70">Site Link</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                    </Link>
-                  </div>
+const LiveProject = () => {
+  const [project, setProject] = useState(projects[0]);
+  
+  const handleSliderChange = (swiper) => {
+    const currentIndex = swiper.activeIndex;
+    setProject(projects[currentIndex]);
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 0.8, duration: 0.6, ease: 'easeOut' } }}
+      className="min-h-screen pt-16 md:pt-20 pb-8 md:pb-12 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0, transition: { delay: 1.0, duration: 0.6 } }}
+          className="text-center mb-8 md:mb-16"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 1.1, duration: 0.6 } }}
+            className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent px-2 mt-10"
+          >
+            My Projects
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 1.2, duration: 0.6 } }}
+            className="text-base sm:text-md md:text-lg lg:text-lg dark:text-white/70 text-black/70 max-w-7xl mx-auto px-4"
+          >
+            Explore my portfolio of web applications, showcasing modern technologies and innovative solutions
+          </motion.p>
+        </motion.div>
+
+        {/* Project Display */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0, transition: { delay: 1.3, duration: 0.8 } }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start lg:items-center"
+        >
+          {/* Project Info */}
+          <div className="order-2 lg:order-1 space-y-6 md:space-y-8">
+            {/* Project Number & Title */}
+            <div className="space-y-3 md:space-y-4">
+              <div className="flex items-center gap-3 md:gap-4">
+                <span className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl font-black bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent">
+                  {project.num}
+                </span>
+                <div className="h-0.5 md:h-1 flex-1 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] rounded-full"></div>
+              </div>
+              <h2 className="text-xl sm:text-xl md:text-2xl lg:text-2xl font-bold dark:text-white text-black leading-tight px-1">
+                {project.title}
+              </h2>
+            </div>
+
+            {/* Description */}
+            <div className="bg-white dark:bg-black/20 backdrop-blur-sm border border-white/10 dark:border-white/10 rounded-xl md:rounded-2xl p-4 md:p-6">
+              <p className="text-sm sm:text-base md:text-base lg:text-sm dark:text-white/80 text-black/80 leading-relaxed">
+                {project.Description}
+              </p>
+            </div>
+
+            {/* Tech Stack */}
+            <div className="space-y-3 md:space-y-4">
+              <h3 className="text-base md:text-base lg:text-lg font-semibold dark:text-white text-black flex items-center gap-2">
+                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e]"></span>
+                Technologies Used
+              </h3>
+              <div className="flex flex-wrap gap-2 md:gap-3">
+                {project.stack.map((item, index) => (
+                  <TooltipProvider key={index}>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <div className="group relative bg-white dark:bg-black/20 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-lg md:rounded-xl p-2 md:p-3 hover:border-[#22c55e]/50 dark:hover:border-[#ADFF2F]/50 transition-all duration-300 hover:scale-105">
+                          <div className="absolute inset-0 bg-gradient-to-r from-[#22c55e]/0 to-[#16a34a]/0 group-hover:from-[#22c55e]/5 group-hover:to-[#16a34a]/5 dark:group-hover:from-[#ADFF2F]/5 dark:group-hover:to-[#22c55e]/5 rounded-lg md:rounded-xl transition-all duration-300"></div>
+                          <Image
+                            width={24}
+                            height={24}
+                            src={item.link}
+                            alt={item.name}
+                            className="relative object-contain filter group-hover:brightness-110 transition-all duration-300 md:w-8 md:h-8"
+                          />
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black/80 text-white border border-[#22c55e]/30 dark:border-[#ADFF2F]/30 backdrop-blur-sm rounded-lg p-2">
+                        <p className="text-xs md:text-sm font-medium">{item.name}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                ))}
               </div>
             </div>
-            <div className="w-full xl:w-[60%] min-h-[50%]">
-              <Swiper spaceBetween={30}  slidesPerView={1} className="xl:h-[520px] mb-12" onSlideChange={handleSliderChange}>
-                {projects.map((item,index)=>
-                {
-                  return(
-                    <SwiperSlide key={index} className="w-full">
-                      <div className="h-[430px] relative group flex justify-center items-center bg-pink-50/20">
-                        <div className="absolute top-0 bottom-0 w-full h-full bg-black/1- z-10"></div>
-                          <div className="relative w-full h-full bg-[#3d4137]">
-                            <Image  src={project.image} fill className="object-fill" alt="img"/>
-                          </div>
-                        
+
+            {/* Action Buttons */}
+            <div className="flex gap-3 md:gap-4">
+              <Link href={project.link} target="_blank">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <div className="group flex items-center gap-2 md:gap-3 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white px-4 py-2.5 md:px-5 md:py-2.5 lg:px-6 lg:py-3 rounded-lg md:rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#22c55e]/25 dark:hover:shadow-[#ADFF2F]/25 text-sm md:text-sm lg:text-base">
+                        <span>View Live</span>
+                        <BsArrowUpRight className="text-sm md:text-base lg:text-md group-hover:rotate-45 transition-transform duration-300" />
                       </div>
-                    </SwiperSlide>
-                  )
-                })}
-  
-                <div>
-                <WorkSliderBtns conatainStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)]  xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="dark:bg-[#ADFF2F] bg-[#22c55e]  text-black/70 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all" 
-                />
+                    </TooltipTrigger>
+                    <TooltipContent className="bg-black/80 text-white border border-[#22c55e]/30 dark:border-[#ADFF2F]/30 backdrop-blur-sm rounded-lg p-2">
+                      <p className="text-xs md:text-sm">Visit live website</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </Link>
+            </div>
+          </div>
+
+          {/* Project Image Slider */}
+          <div className="order-1 lg:order-2 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#22c55e]/20 to-[#16a34a]/20 dark:from-[#ADFF2F]/20 dark:to-[#22c55e]/20 rounded-xl md:rounded-2xl blur-2xl md:blur-3xl"></div>
+            <div className="relative bg-white/10 dark:bg-black/20 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-xl md:rounded-2xl p-2 md:p-4 hover:border-[#22c55e]/30 dark:hover:border-[#ADFF2F]/30 transition-all duration-300">
+              <Swiper
+                spaceBetween={30}
+                slidesPerView={1}
+                className="rounded-lg md:rounded-xl overflow-hidden"
+                onSlideChange={handleSliderChange}
+              >
+                {projects.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="relative aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-lg md:rounded-xl overflow-hidden group">
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300 z-10"></div>
+                      <Image
+                        src={project.image}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        alt={project.title}
+                      />
+                      <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4 z-20">
+                        <div className="bg-black/50 backdrop-blur-sm rounded-md md:rounded-lg p-2 md:p-3">
+                          <p className="text-white text-xs md:text-sm font-medium truncate">
+                            {project.title}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
                 
-                </div>
-              
+                <WorkSliderBtns
+                  conatainStyles="absolute bottom-2 md:bottom-4 right-2 md:right-4 z-30 flex gap-1 md:gap-2"
+                  btnStyles="bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-[#22c55e] dark:hover:bg-[#ADFF2F] text-white hover:text-black text-sm md:text-lg w-8 h-8 md:w-10 md:h-10 flex justify-center items-center rounded-full transition-all duration-300 hover:scale-110"
+                />
               </Swiper>
             </div>
           </div>
-        </div>
-  
-      </motion.div>
-      );
+        </motion.div>
+
+       
+      </div>
+    </motion.div>
+  );
 }
+
 export default LiveProject;
