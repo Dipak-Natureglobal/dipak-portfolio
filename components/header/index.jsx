@@ -84,9 +84,9 @@ const Header = () => {
                             }`}
                     >
                         {theme === "light" ? (
-                            <MoonStar size={20} />
+                            <MoonStar size={20} className="hover:text-[#22c55e] transition-colors" />
                         ) : (
-                            <Sun size={20} />
+                            <Sun size={20} className="hover:text-[#ADFF2F] transition-colors" />
                         )}
                     </button>
 
