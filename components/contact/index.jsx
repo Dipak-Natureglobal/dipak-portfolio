@@ -72,7 +72,7 @@ const info = [
                   
                   <ContactWEB3Form 
                     title="Let's Work Together"
-                    description=""
+                  description="Hi, I'm Dipak Mourya! Fill out the form below to collaborate on web development, UI/UX design, or consultancy. Let's create something amazing together!"
                   />
                 </div>
               </div>
