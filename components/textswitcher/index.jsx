@@ -42,7 +42,7 @@ const RoleSwitcher = () => {
   }, [displayedText, isErasing, currentRoleIndex]);
 
   return (
-    <span className="xl:text-xl text-[16px] dark:text-[#ADFF2F] text-[#22c55e] font-bold">
+    <span className="xl:text-xl text-[16px] bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent font-bold">
       {displayedText}
     </span>
   );

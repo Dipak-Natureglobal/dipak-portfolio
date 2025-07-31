@@ -111,7 +111,7 @@ const ServiceCard = ({ service }) => {
 
 const ServicesSection = () => {
   return (
-    <section className="min-h-[80vh]  mt-36">
+    <section className="min-h-[80vh]  mt-32">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -119,7 +119,7 @@ const ServicesSection = () => {
           transition={{ duration: 0.9, delay: 0.9 }}
           className="text-center mb-10"
         >
-          <h2 className="4 text-2xl md:text-4xl font-bold text-black/70 dark:text-white mb-4">
+          <h2 className=" text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent mb-4">
             Solutions I Provide
           </h2>
           <p className="md:text-lg text-sm text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">

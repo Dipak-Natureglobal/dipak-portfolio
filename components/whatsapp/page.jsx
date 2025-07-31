@@ -57,7 +57,7 @@ const EnhancedContactButton = () => {
         <button
           onClick={togglePopup}
           className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] w-16 h-16 rounded-full bg-gradient-to-r from-[#2eb329] to-[#6df7ee] 
-             dark:from-[#2eb329] dark:to-[#ecf76d]   hover:opacity-90  text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center"
+             dark:from-[#ADFF2F] dark:to-[#22c55e]   hover:opacity-90  text-white shadow-xl transition duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center"
         >
           {isPopupOpen ? (
             <X

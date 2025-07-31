@@ -36,7 +36,7 @@ const PostPage = () => {
     <div className="min-h-screen dark:bg-primary bg-gray-100 py-10 px-4 max-w-7xl mx-auto">
       {/* Header */}
       <div className="mt-[5rem] mb-10">
-        <h1 className=" text-3xl dark:text-[#ADFF2F]  text-[#22c55e] flex align-middle justify-center font-semibold ">Blog Posts</h1>
+        <h1 className=" text-3xl bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent flex align-middle justify-center font-semibold ">Blog Posts</h1>
       </div>
 
       {/* Filter/Search */}
@@ -56,7 +56,7 @@ const PostPage = () => {
                 placeholder="Search blogs..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-3 py-2 w-full border text-black/70 dark:text-slate-50 bg-white dark:bg-primary dark:border-gray-300 border-black/60 rounded-md focus:outline-none focus:ring-2 dark:focus:ring-[#ADFF2F] focus:ring-[#22c55e]"
+                className="pl-10 pr-3 py-2 w-full border text-black/70 dark:text-slate-50 bg-white dark:bg-[#222227] dark:border-gray-300 border-black/60 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22c55e] dark:focus:ring-[#ADFF2F]"
               />
             </div>
             <span className="block mt-1 text-xs text-gray-500 dark:text-gray-400">
@@ -68,7 +68,7 @@ const PostPage = () => {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setSelectedCategory(null)}
-            className={`px-4 py-1 rounded-full text-sm ${!selectedCategory ? "dark:bg-[#ADFF2F] bg-[#22c55e] text-gray-700" : "bg-gray-200 text-gray-700"}`}
+            className={`px-4 py-1 rounded-full text-sm ${!selectedCategory ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white" : "bg-gray-200 text-gray-700"}`}
           >
             All
           </button>
@@ -76,7 +76,7 @@ const PostPage = () => {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-1 rounded-full text-sm ${selectedCategory === cat ? "dark:bg-[#ADFF2F] bg-[#22c55e] text-gray-700" : "bg-gray-200 text-gray-700"}`}
+              className={`px-4 py-1 rounded-full text-sm ${selectedCategory === cat ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white" : "bg-gray-200 text-gray-700"}`}
             >
               {cat}
             </button>
@@ -120,7 +120,7 @@ const PostPage = () => {
                 <p className="text-black/70 dark:text-slate-50 mb-4 line-clamp-3">{post.summary}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">{post.date}</span>
-                  <a href={post.link} target="_blank" className="flex items-center dark:text-[#ADFF2F]  text-[#22c55e]">
+                  <a href={post.link} target="_blank" className="flex items-center bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent">
                     <span>Read More</span>
                     <BookOpen size={16} className="ml-1" />
                   </a>
@@ -147,7 +147,7 @@ const PostPage = () => {
             <button
               key={i}
               onClick={() => handlePageChange(i + 1)}
-              className={`px-3 py-2 rounded ${currentPage === i + 1 ? "dark:bg-[#ADFF2F] bg-[#22c55e] text-gray-700" : "bg-gray-200 hover:bg-gray-300 text-gray-700"}`}
+              className={`px-3 py-2 rounded ${currentPage === i + 1 ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white" : "bg-gray-200 hover:bg-gray-300 text-gray-700"}`}
             >
               {i + 1}
             </button>

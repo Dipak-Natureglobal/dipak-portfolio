@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTheme } from "../theme-provider/page";
 
 const ContactWEB3Form = ({ title, description }) => {
-  const {theme}=useTheme()
+  const { theme } = useTheme()
   const [result, setResult] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
@@ -18,10 +18,10 @@ const ContactWEB3Form = ({ title, description }) => {
       newErrors.email = "Please enter a valid email address.";
     }
     if (!data.phone) {
-        newErrors.phone = "Phone number is required.";
-      } else if (!/^\d{10}$/.test(data.phone)) {
-        newErrors.phone = "Phone number must be 10 digits.";
-      }
+      newErrors.phone = "Phone number is required.";
+    } else if (!/^\d{10}$/.test(data.phone)) {
+      newErrors.phone = "Phone number must be 10 digits.";
+    }
     if (!data.message) newErrors.message = "Please enter your message.";
 
     return newErrors;
@@ -81,14 +81,16 @@ const ContactWEB3Form = ({ title, description }) => {
     }
   };
   const handleReset = () => {
-    setErrors({}); 
+    setErrors({});
     setResult("");
   };
 
   return (
     <div className="dark:bg-[#27272c] bg-white p-5 rounded-lg shadow-sm">
       <div className="text-left m-7">
-        <h1 className="my-3 text-3xl font-semibold dark:text-[#ADFF2F] text-[#22c55e]">{title}</h1>
+        <h1 className="my-3 xl:text-3xl text-2xl font-semibold bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent">
+          {title}
+        </h1>
         <marquee className="dark:text-white/60 text-black/70">{description}</marquee>
       </div>
       <div className="m-7">
@@ -110,9 +112,8 @@ const ContactWEB3Form = ({ title, description }) => {
                 type="text"
                 name="name"
                 id="first_name"
-                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${
-                  errors.name ? "border-red-500" : "dark:border-primary border-gray-500"
-                } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
+                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${errors.name ? "border-red-500" : "dark:border-primary border-gray-500"
+                  } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
                 onInput={() => handleInputChange("name")}
               />
               {errors.name && <div className="text-red-500 text-sm mt-1">{errors.name}</div>}
@@ -125,9 +126,8 @@ const ContactWEB3Form = ({ title, description }) => {
                 type="text"
                 name="last_name"
                 id="last_name"
-                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${
-                  errors.last_name ? "border-red-500" : "dark:border-primary border-gray-500"
-                } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
+                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${errors.last_name ? "border-red-500" : "dark:border-primary border-gray-500"
+                  } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
                 onInput={() => handleInputChange("last_name")}
               />
               {errors.last_name && <div className="text-red-500 text-sm mt-1">{errors.last_name}</div>}
@@ -143,9 +143,8 @@ const ContactWEB3Form = ({ title, description }) => {
                 type="email"
                 name="email"
                 id="email"
-                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${
-                  errors.email ? "border-red-500" : "dark:border-primary border-gray-500"
-                } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
+                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${errors.email ? "border-red-500" : "dark:border-primary border-gray-500"
+                  } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
                 onInput={() => handleInputChange("email")}
               />
               {errors.email && <div className="text-red-500 text-sm mt-1">{errors.email}</div>}
@@ -158,9 +157,8 @@ const ContactWEB3Form = ({ title, description }) => {
                 type="text"
                 name="phone"
                 id="phone"
-                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${
-                  errors.phone ? "border-red-500" : "dark:border-primary border-gray-500"
-                } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
+                className={`w-full px-3 py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${errors.phone ? "border-red-500" : "dark:border-primary border-gray-500"
+                  } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
                 onInput={() => handleInputChange("phone")}
               />
               {errors.phone && <div className="text-red-500 text-sm mt-1">{errors.phone}</div>}
@@ -177,57 +175,55 @@ const ContactWEB3Form = ({ title, description }) => {
               id="message"
               style={{ minHeight: "8rem" }}
               placeholder="Type your message here"
-              className={`w-full px-3 resize-y py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${
-                errors.message ? "border-red-500" : "dark:border-primary border-gray-500"
-              } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
+              className={`w-full px-3 resize-y py-1 dark:bg-primary bg-gray-100 border-2 rounded-md ${errors.message ? "border-red-500" : "dark:border-primary border-gray-500"
+                } focus:outline-none dark:focus:border-[#ADFF2F] focus:border-[#22c55e]`}
               onInput={() => handleInputChange("message")}
             ></textarea>
             {errors.message && <div className="text-red-500 text-sm mt-1">{errors.message}</div>}
           </div>
 
           <div className="mb-6 flex gap-4">
-  <button
-    type="submit"
-    disabled={isSubmitted}
-    className="w-32 flex items-center justify-center gap-2 rounded-full font-bold px-1 py-1 text-black/70 dark:bg-[#ADFF2F] bg-[#22c55e] dark:focus:bg-[#7dae34] focus:bg-[#22c55e] focus:outline-none"
-  >
-    Send
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      xmlns="http://www.w3.org/2000/svg"
-      className="text-black/70 fill-current"
-    >
-      <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
-    </svg>
-  </button>
-  <button
-    type="reset"
-    disabled={isSubmitted}
-    onClick={handleReset}
-    className="w-32 flex items-center justify-center gap-2 font-bold px-2 py-2 text-black/70 dark:bg-[#ADFF2F] bg-[#22c55e] rounded-full dark:focus:bg-[#7dae34] focus:bg-[#22c55e] focus:outline-none"
-  >
-    Reset
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      xmlns="http://www.w3.org/2000/svg"
-      className="text-black/70 fill-current"
-    >
-      <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
-    </svg>
-  </button>
-</div>
+            <button
+              type="submit"
+              disabled={isSubmitted}
+              className="w-32 flex items-center justify-center gap-2 rounded-full font-bold px-1 py-1 text-black/70 bg-[#22c55e] dark:bg-gradient-to-r dark:from-[#ADFF2F] dark:to-[#22c55e] focus:bg-[#22c55e] dark:focus:bg-[#7dae34] focus:outline-none"
+            >
+              Send
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-black/70 fill-current"
+              >
+                <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
+              </svg>
+            </button>
+            <button
+              type="reset"
+              disabled={isSubmitted}
+              onClick={handleReset}
+              className="w-32 flex items-center justify-center gap-2 rounded-full font-bold px-1 py-1 text-black/70 bg-[#22c55e] dark:bg-gradient-to-r dark:from-[#ADFF2F] dark:to-[#22c55e] focus:bg-[#22c55e] dark:focus:bg-[#7dae34] focus:outline-none"
+            >
+              Reset
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-black/70 fill-current"
+              >
+                <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
+              </svg>
+            </button>
+          </div>
 
-          
-<p
-      className={`text-base text-center ${
-        result.includes("wrong") ? "text-red-500" : theme === "dark" ? "text-[#ADFF2F]" : "text-[#22c55e]"
-      }`}
-    >
-            
+
+          <p
+            className={`text-base text-center ${result.includes("wrong") ? "text-red-500" : theme === "dark" ? "text-[#ADFF2F]" : "text-[#22c55e]"
+              }`}
+          >
+
             {result}
           </p>
         </form>
