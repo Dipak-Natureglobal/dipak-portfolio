@@ -182,10 +182,6 @@ const skillsData = {
       name: "Docker",
     },
     {
-      icon: "https://cdn.sanity.io/images/pb7fa4md/production/ac35e8ac8265763b33913f82f6894cc17ef5841a-256x140.svg",
-      name: "React-Router",
-    },
-    {
       icon: "/assets/resume/payload.png",
       name: "Payload-CMS",
     },
@@ -204,6 +200,10 @@ const skillsData = {
     {
       icon: "/assets/resume/express.png",
       name: "Express.js",
+    },
+    {
+      icon: "https://cdn.sanity.io/images/pb7fa4md/production/ac35e8ac8265763b33913f82f6894cc17ef5841a-256x140.svg",
+      name: "React-Router",
     },
 
   ]
@@ -229,7 +229,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0, transition: { delay: 1.1, duration: 0.6 } }}
             className="text-2xl md:text-2xl lg:text-3xl font-bold mb-4 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent mt-10"
           >
-           Personal Overview
+            Personal Overview
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
