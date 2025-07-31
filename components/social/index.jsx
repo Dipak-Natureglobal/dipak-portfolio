@@ -14,7 +14,9 @@ const Social = ({ containerStyles, iconStyles }) => {
       <div className={containerStyles}>
         {socials?.map((item, index) => (  // Use optional chaining to handle potential undefined `socials`
           <Link key={index} href={item.path} target={item.target} className={iconStyles}>
-            {item.icons}
+            <span className="relative z-10 transition-transform duration-300 group-hover:scale-110">
+              {item.icons}
+            </span>
           </Link>
         ))}
       </div>

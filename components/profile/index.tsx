@@ -34,11 +34,17 @@ const Profile = () => {
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
         >
+          <defs>
+            <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor={theme === "dark" ? "#ADFF2F" : "#22c55e"} />
+              <stop offset="100%" stopColor={theme === "dark" ? "#22c55e" : "#16a34a"} />
+            </linearGradient>
+          </defs>
           <motion.circle
             cx="253"
             cy="253"
             r="272"
-            stroke={theme === "dark" ? "#ADFF2F" : "#22c55e"}
+            stroke="url(#circleGradient)"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
