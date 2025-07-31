@@ -88,7 +88,7 @@ const ContactWEB3Form = ({ title, description }) => {
   return (
     <div className="dark:bg-[#27272c] bg-white p-5 rounded-lg shadow-sm">
       <div className="text-left m-7">
-        <h1 className="my-3 text-3xl font-semibold bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent">
+        <h1 className="my-3 xl:text-3xl text-2xl font-semibold bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent">
           {title}
         </h1>
         <marquee className="dark:text-white/60 text-black/70">{description}</marquee>

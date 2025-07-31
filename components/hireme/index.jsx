@@ -95,7 +95,7 @@ const HireMe = () => {
             <div className="xl:sticky xl:top-8">
               <h2 className="text-2xl xl:text-4xl font-bold mb-6 xl:mb-8 dark:text-white text-black/70">
                 Why Choose
-                <span className="dark:text-[#ADFF2F] text-[#22c55e]"> Me?</span>
+                <span className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent"> Me?</span>
               </h2>
 
               {/* Skills Grid */}
