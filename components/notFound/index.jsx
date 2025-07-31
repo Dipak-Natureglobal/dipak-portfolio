@@ -81,7 +81,7 @@ const PageNotFound = () => {
           animate={{ opacity: 1, transition: { delay: 1.1, duration: 0.4, ease: "easeIn" } }}
         >
           <Link href="/" className="group inline-block">
-            <button className="px-8 py-4 flex items-center gap-3 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#84cc16] text-white dark:text-black font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:-translate-y-1">
+            <button className="px-8 py-4 flex items-center gap-3 bg-[#22c55e] dark:bg-gradient-to-r dark:from-[#ADFF2F] dark:to-[#22c55e] focus:bg-[#22c55e] dark:focus:bg-[#7dae34] focus:outline-none text-white dark:text-black font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:-translate-y-1">
               <FaHome className="text-lg" />
               Go Back Home
               <FaArrowLeft className="text-sm group-hover:-translate-x-1 transition-transform duration-300" />
