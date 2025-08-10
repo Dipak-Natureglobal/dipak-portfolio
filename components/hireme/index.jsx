@@ -49,7 +49,7 @@ const HireMe = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.6, ease: "easeInOut" } }}
-      className="py-12 min-h-screen"
+      className="py-12 min-h-screen container"
     >
       <div className="container mx-auto px-4 xl:mt-16 mt-20 max-w-full overflow-hidden">
         {/* Hero Section */}
