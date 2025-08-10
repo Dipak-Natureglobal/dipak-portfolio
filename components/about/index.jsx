@@ -283,13 +283,25 @@ const About = () => {
                         {experience.title}
                       </h2>
                       <div className="p-3 rounded-full bg-gradient-to-r from-[#22c55e]/20 to-[#16a34a]/20 dark:from-[#ADFF2F]/20 dark:to-[#22c55e]/20 backdrop-blur-sm">
-                        <Image
-                          src={theme === "dark" ? experience.icons : "/assets/resume/experience-light.png"}
-                          alt="experience icon"
-                          width={32}
-                          height={32}
-                          className="object-contain"
-                        />
+                        {/* Optimized: Render both images and toggle with CSS for instant switch */}
+                        <span className="relative w-8 h-8 block">
+                          <Image
+                            src={experience.icons}
+                            alt="experience icon dark"
+                            width={32}
+                            height={32}
+                            className="object-contain dark:inline-block hidden absolute inset-0"
+                            priority
+                          />
+                          <Image
+                            src="/assets/resume/experience-light.png"
+                            alt="experience icon light"
+                            width={32}
+                            height={32}
+                            className="object-contain dark:hidden inline-block absolute inset-0"
+                            priority
+                          />
+                        </span>
                       </div>
                     </div>
                     <p className="text-base md:text-lg dark:text-white/70 text-black/70 w-full leading-relaxed text-left">
@@ -333,13 +345,25 @@ const About = () => {
                         {education.title}
                       </h2>
                       <div className="p-3 rounded-full bg-gradient-to-r from-[#22c55e]/20 to-[#16a34a]/20 dark:from-[#ADFF2F]/20 dark:to-[#22c55e]/20 backdrop-blur-sm">
-                        <Image
-                          src={theme === "dark" ? education.icons : "/assets/resume/education-light.png"}
-                          alt="education icon"
-                          width={32}
-                          height={32}
-                          className="object-contain"
-                        />
+                        {/* Optimized: Render both images and toggle with CSS for instant switch */}
+                        <span className="relative w-8 h-8 block">
+                          <Image
+                            src={education.icons}
+                            alt="education icon dark"
+                            width={32}
+                            height={32}
+                            className="object-contain dark:inline-block hidden absolute inset-0"
+                            priority
+                          />
+                          <Image
+                            src="/assets/resume/education-light.png"
+                            alt="education icon light"
+                            width={32}
+                            height={32}
+                            className="object-contain dark:hidden inline-block absolute inset-0"
+                            priority
+                          />
+                        </span>
                       </div>
                     </div>
                     <p className="text-base md:text-lg dark:text-white/70 text-black/70 w-full leading-relaxed text-left">
@@ -384,13 +408,25 @@ const About = () => {
                         {skillsData.title}
                       </h2>
                       <div className="p-3 rounded-full bg-gradient-to-r from-[#22c55e]/20 to-[#16a34a]/20 dark:from-[#ADFF2F]/20 dark:to-[#22c55e]/20 backdrop-blur-sm">
-                        <Image
-                          src={theme === "dark" ? skillsData.icons : "/assets/resume/skills-light.png"}
-                          alt="skills icon"
-                          width={32}
-                          height={32}
-                          className="object-contain"
-                        />
+                        {/* Optimized: Render both images and toggle with CSS for instant switch */}
+                        <span className="relative w-8 h-8 block">
+                          <Image
+                            src={skillsData.icons}
+                            alt="skills icon dark"
+                            width={32}
+                            height={32}
+                            className="object-contain dark:inline-block hidden absolute inset-0"
+                            priority
+                          />
+                          <Image
+                            src="/assets/resume/skills-light.png"
+                            alt="skills icon light"
+                            width={32}
+                            height={32}
+                            className="object-contain dark:hidden inline-block absolute inset-0"
+                            priority
+                          />
+                        </span>
                       </div>
                     </div>
                     <p className="text-base md:text-lg dark:text-white/70 text-black/70 w-full leading-relaxed text-left">
@@ -439,13 +475,25 @@ const About = () => {
                         {about.title}
                       </h2>
                       <div className="p-3 rounded-full bg-gradient-to-r from-[#22c55e]/20 to-[#16a34a]/20 dark:from-[#ADFF2F]/20 dark:to-[#22c55e]/20 backdrop-blur-sm">
-                        <Image
-                          src={theme === "dark" ? about.icons : "/assets/resume/profile-light.png"}
-                          alt="profile icon"
-                          width={32}
-                          height={32}
-                          className="object-contain"
-                        />
+                        {/* Optimized: Render both images and toggle with CSS for instant switch */}
+                        <span className="relative w-8 h-8 block">
+                          <Image
+                            src={about.icons}
+                            alt="profile icon dark"
+                            width={32}
+                            height={32}
+                            className="object-contain dark:inline-block hidden absolute inset-0"
+                            priority
+                          />
+                          <Image
+                            src="/assets/resume/profile-light.png"
+                            alt="profile icon light"
+                            width={32}
+                            height={32}
+                            className="object-contain dark:hidden inline-block absolute inset-0"
+                            priority
+                          />
+                        </span>
                       </div>
                     </div>
                     <p className="text-base md:text-lg dark:text-white/70 text-black/70 w-full leading-relaxed text-left mb-8">

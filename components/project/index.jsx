@@ -2,7 +2,10 @@
 import { motion } from "framer-motion"
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"
+import SwiperCore, { Autoplay } from "swiper";
+import "swiper/css";
+// Register Swiper modules
+SwiperCore.use([Autoplay]);
 import { BsArrowUpRight, BsGithub } from "react-icons/bs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@radix-ui/react-tooltip";
 import Link from "next/link";
@@ -257,6 +260,7 @@ const LiveProject = () => {
                 slidesPerView={1}
                 className="rounded-lg md:rounded-xl overflow-hidden"
                 onSlideChange={handleSliderChange}
+                autoplay={{ delay: 8000, disableOnInteraction: false }}
               >
                 {projects.map((item, index) => (
                   <SwiperSlide key={index}>

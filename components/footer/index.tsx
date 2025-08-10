@@ -41,13 +41,25 @@ const Footer = () => {
             >
                 <div className="flex flex-row">
                 <Link href="/">
+                  {/* Optimized: Render both logo images and toggle with CSS for instant switch */}
+                  <span className="relative w-[60px] h-[60px] block">
                     <Image
-                    src={theme === "dark" ? "/assets/profile/logo.png" : "/assets/profile/light-logo.png"}                   
-                    alt="logo"
-                    width={60}
-                    height={60}
-                    layout="fixed"
-                    className=" block"/>
+                      src="/assets/profile/logo.png"
+                      alt="logo dark"
+                      width={60}
+                      height={60}
+                      className="hidden dark:inline-block absolute inset-0"
+                      priority
+                    />
+                    <Image
+                      src="/assets/profile/light-logo.png"
+                      alt="logo light"
+                      width={60}
+                      height={60}
+                      className="inline-block dark:hidden absolute inset-0"
+                      priority
+                    />
+                  </span>
                 </Link>
                
                 </div>

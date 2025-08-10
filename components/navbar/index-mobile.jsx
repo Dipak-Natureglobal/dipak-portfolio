@@ -48,15 +48,25 @@ const MobileNavbar = () => {
         </SheetTrigger>
         <SheetContent className="flex flex-col">
           <SheetClose asChild>
-            {/* <Link href="/"> */}
+            {/* Optimized: Render both logo images and toggle with CSS for instant switch */}
+            <span className="relative w-[56px] h-[56px] block mb-36">
               <Image
-                src={theme === "dark" ? "/assets/profile/logo.png" : "/assets/profile/light-logo.png"}
-                alt="logo"
+                src="/assets/profile/logo.png"
+                alt="logo dark"
                 width={50}
                 height={50}
-                className="w-14  mb-36 block"
+                className="hidden dark:inline-block absolute inset-0 w-14"
+                priority
               />
-            {/* </Link> */}
+              <Image
+                src="/assets/profile/light-logo.png"
+                alt="logo light"
+                width={50}
+                height={50}
+                className="inline-block dark:hidden absolute inset-0 w-14"
+                priority
+              />
+            </span>
           </SheetClose>
           <nav className='flex flex-col justify-center items-center gap-6'>
             {links.map((link, index) => {
