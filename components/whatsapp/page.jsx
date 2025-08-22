@@ -145,11 +145,14 @@ const EnhancedContactButton = () => {
               {/* Profile Section */}
               <div className="flex items-center space-x-2 sm:space-x-3 flex-1">
                 {/* Avatar */}
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-600 font-semibold text-xs sm:text-sm overflow-hidden">
-                  <img
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-300 rounded-full relative overflow-hidden">
+                  <Image
                     src="/assets/profile/profile.png"
                     alt="Dipak Mourya"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 40px, 48px"
+                    priority
                   />
                 </div>
 
