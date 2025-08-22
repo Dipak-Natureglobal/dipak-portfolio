@@ -77,7 +77,7 @@ export default function ActionDialog() {
           Timeline  <Briefcase className="w-5 h-5  mx-3" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-xl w-[90vw] sm:w-full h-[90vh] sm:h-[600px] p-0 overflow-hidden bg-white dark:bg-[#1c1c22] border border-[#22c55e]/20 dark:border-[#ADFF2F]/20 mx-auto my-4 sm:my-auto left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+  <DialogContent className="max-w-xl w-[90vw] sm:w-full h-[90vh] sm:h-[600px] p-0 overflow-hidden bg-white dark:bg-[#1c1c22] border border-[#22c55e]/20 dark:border-[#ADFF2F]/20 mx-auto my-4 sm:my-auto sm:fixed sm:left-[50%] sm:top-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]">
         {/* Sticky Header */}
         <div className="sticky top-0 z-10 bg-white dark:bg-[#1c1c22] border-b border-[#22c55e]/20 dark:border-[#ADFF2F]/20 p-4 sm:p-6">
           <DialogHeader>
@@ -91,7 +91,7 @@ export default function ActionDialog() {
         </div>
 
         {/* Scrollable Timeline Content */}
-        <ScrollArea className="flex-1 h-[calc(90vh-140px)] sm:h-[calc(600px-140px)]">
+  <ScrollArea className="flex-1 h-[calc(90vh-140px)] sm:h-[calc(600px-140px)]">
           <div className="relative p-4 sm:p-6">
             {/* Main Timeline Container */}
             <div className="relative pl-16 sm:pl-24">
