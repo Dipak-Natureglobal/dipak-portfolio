@@ -318,7 +318,7 @@ const About = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-[#22c55e]/10 to-[#16a34a]/10 dark:from-[#ADFF2F]/10 dark:to-[#22c55e]/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                         <div className="relative bg-white/5 dark:bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-[#22c55e]/30 dark:hover:border-[#ADFF2F]/30 transition-all duration-300 h-full">
                           <div className="flex items-start justify-between mb-4">
-                            <span className="px-3 py-1 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white text-sm font-semibold rounded-full">
+                            <span className="px-3 py-1 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-black/70 text-sm font-semibold rounded-full">
                               {item.duration}
                             </span>
                             {/* <ArrowBigUp className="w-5 h-5 text-[#ADFF2F] rotate-45 opacity-60" /> */}
@@ -380,7 +380,7 @@ const About = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-[#22c55e]/10 to-[#16a34a]/10 dark:from-[#ADFF2F]/10 dark:to-[#22c55e]/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                         <div className="relative bg-white/5 dark:bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-[#22c55e]/30 dark:hover:border-[#ADFF2F]/30 transition-all duration-300 h-full">
                           <div className="flex items-start justify-between mb-4">
-                            <span className="px-3 py-1 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white text-sm font-semibold rounded-full">
+                            <span className="px-3 py-1 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-black/70 text-sm font-semibold rounded-full">
                               {item.duration}
                             </span>
                           </div>

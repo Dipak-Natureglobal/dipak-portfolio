@@ -31,7 +31,7 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed w-full z-40 top-0 left-0 py-6 xl:py-5 shadow-lg transition-all duration-300 
+            className={`fixed w-full z-40 top-0 left-0 py-4 xl:py-4 shadow-lg transition-all duration-300 
             ${isScrolled
                     ? "bg-white/90 text-black dark:bg-primary/80 dark:text-white/80 backdrop-blur-md"
                     : "bg-white text-black dark:bg-primary dark:text-white"
@@ -43,13 +43,13 @@ const Header = () => {
 
                 <Link href="/">
                     {/* Optimized: Render both logo images and toggle with CSS for instant switch */}
-                    <span className="relative w-[60px] h-[60px] block">
+                    <span className="relative w-[60px] h-[60px] block ">
                         <Image
                             src="/assets/profile/logo.png"
                             alt="logo dark"
                             width={60}
                             height={60}
-                            className="hidden dark:inline-block absolute inset-0"
+                            className="hidden dark:inline-block absolute inset-0 mt-3"
                             priority
                         />
                         <Image
@@ -57,7 +57,7 @@ const Header = () => {
                             alt="logo light"
                             width={60}
                             height={60}
-                            className="inline-block dark:hidden absolute inset-0"
+                            className="inline-block dark:hidden absolute inset-0 mt-3"
                             priority
                         />
                     </span>

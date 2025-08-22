@@ -2,10 +2,8 @@
 import { motion } from "framer-motion"
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay } from "swiper";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-// Register Swiper modules
-SwiperCore.use([Autoplay]);
 import { BsArrowUpRight, BsGithub } from "react-icons/bs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@radix-ui/react-tooltip";
 import Link from "next/link";
@@ -238,8 +236,8 @@ const LiveProject = () => {
                   <Tooltip>
                     <TooltipTrigger>
                       <div className="group flex items-center gap-2 md:gap-3 bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white px-4 py-2.5 md:px-5 md:py-2.5 lg:px-6 lg:py-3 rounded-lg md:rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#22c55e]/25 dark:hover:shadow-[#ADFF2F]/25 text-sm md:text-sm lg:text-base">
-                        <span>View Live</span>
-                        <BsArrowUpRight className="text-sm md:text-base lg:text-md group-hover:rotate-45 transition-transform duration-300" />
+                        <span className="text-black/70">View Live</span>
+                        <BsArrowUpRight className="text-sm md:text-base lg:text-md group-hover:rotate-45 transition-transform duration-300 text-black/70" />
                       </div>
                     </TooltipTrigger>
                     <TooltipContent className="bg-black/80 text-white border border-[#22c55e]/30 dark:border-[#ADFF2F]/30 backdrop-blur-sm rounded-lg p-2">
@@ -256,6 +254,7 @@ const LiveProject = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-[#22c55e]/20 to-[#16a34a]/20 dark:from-[#ADFF2F]/20 dark:to-[#22c55e]/20 rounded-xl md:rounded-2xl blur-2xl md:blur-3xl"></div>
             <div className="relative bg-white/10 dark:bg-black/20 backdrop-blur-sm border border-white/20 dark:border-white/10 rounded-xl md:rounded-2xl p-2 md:p-4 hover:border-[#22c55e]/30 dark:hover:border-[#ADFF2F]/30 transition-all duration-300">
               <Swiper
+                modules={[Autoplay]}
                 spaceBetween={30}
                 slidesPerView={1}
                 className="rounded-lg md:rounded-xl overflow-hidden"
@@ -267,10 +266,10 @@ const LiveProject = () => {
                     <div className="relative aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-lg md:rounded-xl overflow-hidden group">
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300 z-10"></div>
                       <Image
-                        src={project.image}
+                        src={item.image}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        alt={project.title}
+                        alt={item.title}
                       />
                       <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4 z-20">
                         <div className="bg-black/50 backdrop-blur-sm rounded-md md:rounded-lg p-2 md:p-3">
