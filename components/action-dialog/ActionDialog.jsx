@@ -81,7 +81,7 @@ export default function ActionDialog() {
         {/* Sticky Header */}
         <div className="sticky top-0 z-10 bg-white dark:bg-[#1c1c22] border-b border-[#22c55e]/20 dark:border-[#ADFF2F]/20 p-4 sm:p-6">
           <DialogHeader>
-            <DialogTitle className="text-black dark:text-white text-lg sm:text-xl font-bold text-left">
+            <DialogTitle className="text-black/70 dark:text-white text-lg sm:text-xl font-bold text-left">
               Professional Timeline
             </DialogTitle>
             <DialogDescription className="text-gray-600 dark:text-gray-400 text-sm text-left">
