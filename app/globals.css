@@ -28,4 +28,22 @@
     }
 }
 
-  
+@layer components {
+    /* Mobile modal fixes */
+    @media (max-width: 640px) {
+        [data-radix-popper-content-wrapper] {
+            position: fixed !important;
+            inset: 0 !important;
+            margin: 1rem !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        
+        /* Ensure modal doesn't overflow viewport */
+        [role="dialog"] {
+            max-height: calc(100vh - 2rem) !important;
+            max-width: calc(100vw - 2rem) !important;
+        }
+    }
+}

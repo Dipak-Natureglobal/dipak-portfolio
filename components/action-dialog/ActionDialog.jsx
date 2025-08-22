@@ -77,7 +77,7 @@ export default function ActionDialog() {
           Timeline  <Briefcase className="w-5 h-5  mx-3" />
         </Button>
       </DialogTrigger>
-  <DialogContent className="max-w-xl w-[90vw] sm:w-full h-[90vh] sm:h-[600px] p-0 overflow-hidden bg-white dark:bg-[#1c1c22] border border-[#22c55e]/20 dark:border-[#ADFF2F]/20 mx-auto my-4 sm:my-auto sm:fixed sm:left-[50%] sm:top-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%]">
+      <DialogContent className="max-w-xl w-[95vw] sm:w-full max-h-[90vh] sm:h-[600px] p-0 overflow-hidden bg-white dark:bg-[#1c1c22] border border-[#22c55e]/20 dark:border-[#ADFF2F]/20 data-[state=open]:duration-200 data-[state=closed]:duration-200 mx-auto my-auto rounded-lg sm:rounded-lg">
         {/* Sticky Header */}
         <div className="sticky top-0 z-10 bg-white dark:bg-[#1c1c22] border-b border-[#22c55e]/20 dark:border-[#ADFF2F]/20 p-4 sm:p-6">
           <DialogHeader>
@@ -91,7 +91,7 @@ export default function ActionDialog() {
         </div>
 
         {/* Scrollable Timeline Content */}
-  <ScrollArea className="flex-1 h-[calc(90vh-140px)] sm:h-[calc(600px-140px)]">
+        <ScrollArea className="flex-1 h-[calc(90vh-180px)] sm:h-[calc(600px-160px)]">
           <div className="relative p-4 sm:p-6">
             {/* Main Timeline Container */}
             <div className="relative pl-16 sm:pl-24">
@@ -140,7 +140,7 @@ export default function ActionDialog() {
             </div>
             
             {/* Footer Close Button */}
-            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-[#22c55e]/20 dark:border-[#ADFF2F]/20">
+            <div className="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-[#22c55e]/20 dark:border-[#ADFF2F]/20 pb-2 sm:pb-4">
               <div className="flex justify-end">
                 <DialogClose asChild>
                   <Button className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white dark:text-black font-bold px-4 sm:px-6 py-2 text-sm sm:text-base hover:opacity-90 transition-opacity">
