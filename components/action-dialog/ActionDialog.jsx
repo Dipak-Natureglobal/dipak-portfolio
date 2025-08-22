@@ -22,12 +22,12 @@ const timelineData = [
       {
         month: "August",
         title: "Promoted to Software Engineer (M1)",
-        desc: "Promoted to Software Engineer M1. Delivered scalable solutions across multiple projects.",
+        desc: "Led frontend development mainly for RP (Resource Planning), managed and coordinated the team, and guided project execution for multiple features.",
       },
       {
         month: "June",
         title: "Started Freelancing",
-        desc: "Started freelancing on various projects, building full-stack applications and web solutions.",
+        desc: "Started freelancing with my own team, building full-stack applications and web solutions. Managed all resources and coordinated contributions for each project. Successfully delivered projects for both Indian and US clients.",
       },
     ],
   },
