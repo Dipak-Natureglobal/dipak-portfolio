@@ -68,7 +68,7 @@ const PostPage = () => {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setSelectedCategory(null)}
-            className={`px-4 py-1 rounded-full text-sm ${!selectedCategory ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white" : "bg-gray-200 text-gray-700"}`}
+            className={`px-4 py-1 rounded-full text-sm ${!selectedCategory ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-black/70" : "bg-gray-200 text-black/70"}`}
           >
             All
           </button>
@@ -76,7 +76,7 @@ const PostPage = () => {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-1 rounded-full text-sm ${selectedCategory === cat ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white" : "bg-gray-200 text-gray-700"}`}
+              className={`px-4 py-1 rounded-full text-sm ${selectedCategory === cat ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-black/70" : "bg-gray-200 text-black/70"}`}
             >
               {cat}
             </button>
