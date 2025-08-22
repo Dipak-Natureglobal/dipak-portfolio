@@ -38,7 +38,7 @@ const Navbar = () => {
         return <Link
           href={link.path}
           key={index}
-          className={`${link.path === pathname ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent border-b-2 dark:border-[#ADFF2F] border-[#22c55e]" : "text-black/70 dark:text-white"} capitalize font-medium hover:bg-gradient-to-r hover:from-[#22c55e] hover:to-[#16a34a] dark:hover:from-[#ADFF2F] dark:hover:to-[#22c55e] hover:bg-clip-text hover:text-transparent transition-all`}
+          className={`${link.path === pathname ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent border-b-2 dark:border-[#ADFF2F] border-[#22c55e]" : "text-black/70 dark:text-white"} capitalize font-medium  hover:bg-clip-text  transition-all`}
         >
           {link.name}
         </Link>

@@ -74,7 +74,7 @@ const MobileNavbar = () => {
                 <SheetClose asChild key={index}>
                   <Link
                     href={link.path}
-                    className={`${link.path === pathname && "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent border-b-2 dark:border-[#ADFF2F] border-[#22c55e]"} text-xl capitalize hover:bg-gradient-to-r hover:from-[#22c55e] hover:to-[#16a34a] dark:hover:from-[#ADFF2F] dark:hover:to-[#22c55e] hover:bg-clip-text hover:text-transparent transition-all text-black/70 dark:text-slate-50`}
+                    className={`${link.path === pathname && "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent border-b-2 dark:border-[#ADFF2F] border-[#22c55e]"} text-xl capitalize  hover:bg-clip-text  transition-all text-black/70 dark:text-slate-50`}
                   >
                     {link.name}
                   </Link>

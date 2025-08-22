@@ -8,6 +8,7 @@ import Social from "../../components/social/index"
 import Profile from "../../components/profile/index";
 import Image from "next/image";
 import Stats from "../../components/stats/page";
+import ActionDialog from "../../components/action-dialog/ActionDialog";
 const HomePage = () => {
   return (
     <section className="min-h-[80vh] xl:mt-24  mt-32">
@@ -107,20 +108,23 @@ const HomePage = () => {
               <p className="max-w-[610px] mb-6 dark:text-white/80 text-black/70 text-left xl:ml-0 ml-4">
                 Hi, I am Dipak Mourya, a passionate Software Developer with over a year of experience in real-time projects. I continuously evolve my skills and embrace new technologies. With a degree in Computer Science Engineering, I enhance my efficiency in software development. Currently, I&#39;m pursuing an <span className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent font-bold"> Master of Business Administration (MBA)</span> in Business Analytics, merging my technical expertise with business insight for impactful results.
               </p>
-              <Link href='/about' className="xl:flex hidden">
-                <Button className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] hover:bg-gradient-to-r hover:from-[#16a34a] hover:to-[#22c55e] dark:hover:from-[#22c55e] dark:hover:to-[#ADFF2F] text-white dark:text-black/70 font-bold gap-2">
+              <div className=" gap-2 xl:flex hidden">
+                <Link href='/about' >
+                  <Button className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] hover:bg-gradient-to-r hover:from-[#16a34a] hover:to-[#22c55e] dark:hover:from-[#22c55e] dark:hover:to-[#ADFF2F] text-white dark:text-black/70 font-bold gap-2">
 
-                  <span className="hover:pr-3 duration-500 flex">Discover More</span>
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-white dark:text-black/70 fill-current">
-                    <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
-                  </svg>
-                </Button>
-              </Link>
+                    <span className="hover:pr-3 duration-500 flex">Discover More</span>
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="text-white dark:text-black/70 fill-current">
+                      <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
+                    </svg>
+                  </Button>
+                </Link>
+                <ActionDialog />
+              </div>
               <div className=" flex flex-row gap-3 items-center justify-center xl:hidden">
                 <Link href='/about'>
                   <Button className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] hover:bg-gradient-to-r hover:from-[#16a34a] hover:to-[#22c55e] dark:hover:from-[#22c55e] dark:hover:to-[#ADFF2F] text-white dark:text-black/70 font-bold gap-2">
@@ -150,12 +154,14 @@ const HomePage = () => {
                   </Button>
                 </Link>
               </div>
+
             </div>
             <div className="order-1 xl:order-none xl:mt-16 mb-8 xl:mb-0"><Profile /></div>
 
 
           </div>
         </div>
+
         <div className="container mx-auto h-full xl:mt-0 mt-4">
           <div className="w-full flex items-center justify-center bg-gray-100 dark:bg-primary px-0 py-6">
             <div className="text-left max-w-6xl w-full bg-gray-100 dark:bg-[#27272c] rounded-2xl shadow-2xl p-8 md:p-16 border dark:border-[#ADFF2F]/40 border-[#22c55e]/40">
@@ -218,6 +224,10 @@ const HomePage = () => {
                 The future belongs to those who adapt. Many more powerful AI tools are available —
                 <span className="font-semibold bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent"> explore and grow.</span><br /><br />
               </p>
+              <div className="flex justify-center items-center mt-8 xl:hidden ">
+                <ActionDialog />
+              </div>
+
             </div>
           </div>
         </div>
