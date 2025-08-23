@@ -1,26 +1,30 @@
 import HomePage from '../components/home/index'
 
 export const metadata = {
-  title: "Portfolio | Home",
-  description: "Welcome to the portfolio of Dipak, a full-stack web developer showcasing web development projects and design skills.", 
+  title: "Home | Dipak Mourya - Full Stack Developer",
+  description:
+    "Welcome to the portfolio of Dipak Mourya, a full-stack developer passionate about building scalable web applications and crafting engaging digital experiences.",
   openGraph: {
-    title: 'Dipak Portfolio | Home',
-    url: 'https://dipakdev.in/',
-    type: 'website',
+    title: "Home | Dipak Mourya - Full Stack Developer",
+    description:
+      "Explore the portfolio of Dipak Mourya, a full-stack developer creating innovative, user-friendly, and high-performance web solutions.",
+    url: "https://dipakdev.in",
+    type: "website",
     images: [
       {
-        url: 'https://dipakdev.in/assets/opengraph/home.jpg',
+        url: "https://dipakdev.in/assets/opengraph/home.jpg",
         width: 1200,
         height: 630,
-        alt: 'Dipak Dev Home Image',
+        alt: "Dipak Mourya - Full Stack Developer",
       },
     ],
   },
 };
+
 const Home = () => {
-  return(
-   <HomePage/>
+  return (
+    <HomePage />
   );
 };
 
- export default Home;
+export default Home;

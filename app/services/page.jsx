@@ -1,22 +1,28 @@
+
+import Services from "../../components/services/index";
+
+
 export const metadata = {
-  title: "Portfolio | Services",
-  description: "Welcome to the portfolio of Dipak, a full-stack web developer showcasing web development projects and design skills.",
+  title: "Services | Dipak Mourya - Full Stack Developer",
+  description:
+    "Discover the services offered by Dipak Mourya, a full-stack developer providing web development, UI/UX design, and end-to-end digital solutions tailored to your needs.",
   openGraph: {
-    title: 'Dipak Portfolio | Services',
-    url: 'https://dipakdev.in/services',
-    type: 'website',
+    title: "Services | Dipak Mourya - Full Stack Developer",
+    description:
+      "Explore the services of Dipak Mourya, delivering scalable web applications, intuitive UI/UX design, and innovative digital solutions for clients and businesses.",
+    url: "https://dipakdev.in/services",
+    type: "website",
     images: [
       {
-        url: 'https://dipakdev.in/assets/opengraph/services.png',
+        url: "https://dipakdev.in/assets/opengraph/services.png",
         width: 1200,
         height: 630,
-        alt: 'Dipak Dev Service Image',
+        alt: "Services Dipak Mourya - Full Stack Developer",
       },
     ],
   },
 };
 
-import Services from "../../components/services/index";
 
 export default function ServicesPage() {
   return <Services />;
