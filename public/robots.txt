@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dipakdev.in/sitemap.xml
+Host: https://dipakdev.in
