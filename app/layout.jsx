@@ -28,7 +28,7 @@ export const metadata = {
     description: 'Portfolio of Dipak Mourya — Full Stack Developer specializing in React and Next.js.',
     images: [
       {
-        url: `${siteUrl}/assets/opengraph/home.jpg`,
+        url: `${siteUrl}/assets/opengraph/home.webp`,
         width: 1200,
         height: 630,
       },

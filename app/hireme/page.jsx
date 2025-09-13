@@ -14,7 +14,7 @@ export const metadata = {
     type: "website",
     images: [ 
       {
-        url: `${siteUrl}/assets/opengraph/hireme.png`,
+        url: `${siteUrl}/assets/opengraph/hireme.webp`,
         width: 1200,
         height: 630,
         alt: "Hire Dipak Mourya - Full Stack Developer",
@@ -28,7 +28,7 @@ export const metadata = {
     title: "Hire Me | Dipak Mourya - Full Stack Developer",
     description:
       "Work with Dipak Mourya, a full-stack developer delivering high-performance web solutions, UI/UX design, and end-to-end application development.",
-    image: `${siteUrl}/assets/opengraph/hireme.png`,
+    image: `${siteUrl}/assets/opengraph/hireme.webp`,
   }),
   robots: { index: true, follow: true },
 };

@@ -14,7 +14,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: `${siteUrl}/assets/opengraph/contact.png`,
+        url: `${siteUrl}/assets/opengraph/contact.webp`,
         width: 1200,
         height: 630,
         alt: "Contact Dipak Mourya - Full Stack Developer",
@@ -28,7 +28,7 @@ export const metadata = {
     title: "Contact | Dipak Mourya - Full Stack Developer",
     description:
       "Reach out to Dipak Mourya for collaborations, freelance work, or project opportunities. Let's build scalable and user-focused digital experiences together.",
-    image: `${siteUrl}/assets/opengraph/contact.png`,
+    image: `${siteUrl}/assets/opengraph/contact.webp`,
   }),
   robots: { index: true, follow: true },
 };
