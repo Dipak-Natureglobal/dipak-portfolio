@@ -147,7 +147,7 @@ const EnhancedContactButton = () => {
                 {/* Avatar */}
                 <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-300 rounded-full relative overflow-hidden">
                   <Image
-                    src="/assets/profile/profile.webp"
+                    src="/assets/profile/profile.png"
                     alt="Dipak Mourya"
                     fill
                     className="object-cover"

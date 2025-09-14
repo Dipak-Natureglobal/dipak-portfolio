@@ -18,7 +18,7 @@ const Profile = () => {
           className="w-[298px] h-[298px] xl:w-[420px] xl:h-[420px]  absolute rounded-full overflow-hidden"
         >
           <Image
-            src="/assets/profile/profile.webp"
+            src="/assets/profile/profile.png"
             priority
             quality={100}
             fill
