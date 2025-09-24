@@ -32,7 +32,8 @@
     "shadcn-ui": "^0.2.3",
     "swiper": "^11.1.14",
     "tailwind-merge": "^2.5.3",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "react-hot-toast": "^2.6.0"
   },
   "devDependencies": {
     "@types/node": "22.7.4",

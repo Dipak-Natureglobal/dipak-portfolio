@@ -6,7 +6,7 @@ import StairTransition from "../components/staireffect/page"
 import Footer from "../components/footer/index";
 import WhatsAppButton from "../components/whatsapp/page"
 import ThemeProvider from "../components/theme-provider/page"
-import { icons } from "lucide-react";
+import { Toaster } from "react-hot-toast";
 import { siteUrl, defaultKeywords, personJsonLd, organizationJsonLd, websiteJsonLd } from '../lib/seo'
 
 const JetbrainsMono=JetBrains_Mono(
@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <WhatsAppButton />
         </ThemeProvider>
-       
+          <Toaster position="top-center" />
       </body>
     </html>
   );

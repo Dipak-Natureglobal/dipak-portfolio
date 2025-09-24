@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useTheme } from "../theme-provider/page";
+import { toast } from "react-hot-toast";
 
 const ContactWEB3Form = ({ title, description }) => {
   const { theme } = useTheme()
-  const [result, setResult] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
 
@@ -50,7 +50,12 @@ const ContactWEB3Form = ({ title, description }) => {
       return; // Stop submission if there are errors
     }
 
-    setResult("Please wait...");
+    toast.loading("Sending message...",{
+      style: theme === "dark"
+        ? { background: "#fff", color: "#000" }
+        : { background: "#4c4c4c", color: "#fff" }
+    }
+    );
     setIsSubmitted(true);
 
     try {
@@ -66,23 +71,35 @@ const ContactWEB3Form = ({ title, description }) => {
       const json = await response.json();
 
       if (response.status === 200) {
-        setResult(json.message);
+        toast.dismiss();
+        toast.success("Thank you for contacting us!",{
+          duration: 3000,
+          style: { background: '#22c55e', color: '#fff' }
+        });
         setTimeout(() => {
           form.reset();
-          setResult("");
           setIsSubmitted(false);
-        }, 2000);
+        }, 1000);
       } else {
-        setResult(json.message || "Something went wrong!");
+        toast.dismiss();
+        toast.error(json.message || "Something went wrong!",{
+          duration: 3000,
+          style: { background: '#ff4d4f', color: '#fff' }
+        });
+        setIsSubmitted(false);
       }
     } catch (error) {
       console.error(error);
-      setResult("Something went wrong!");
+      toast.dismiss();
+      toast.error("Something went wrong!",{
+        duration: 3000,
+        style: { background: '#ff4d4f', color: '#fff' }
+      });
+      setIsSubmitted(false);
     }
   };
   const handleReset = () => {
     setErrors({});
-    setResult("");
   };
 
   return (
@@ -188,7 +205,7 @@ const ContactWEB3Form = ({ title, description }) => {
               disabled={isSubmitted}
               className="w-32 flex items-center justify-center gap-2 rounded-full font-bold px-1 py-1 text-black/70 bg-[#22c55e] dark:bg-gradient-to-r dark:from-[#ADFF2F] dark:to-[#22c55e] focus:bg-[#22c55e] dark:focus:bg-[#7dae34] focus:outline-none"
             >
-              Send
+              { isSubmitted ? "Sending" : "Send" }
               <svg
                 width="14"
                 height="14"
@@ -218,14 +235,6 @@ const ContactWEB3Form = ({ title, description }) => {
             </button>
           </div>
 
-
-          <p
-            className={`text-base text-center ${result.includes("wrong") ? "text-red-500" : theme === "dark" ? "text-[#ADFF2F]" : "text-[#22c55e]"
-              }`}
-          >
-
-            {result}
-          </p>
         </form>
       </div>
     </div>
