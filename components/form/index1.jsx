@@ -72,7 +72,7 @@ const ContactWEB3Form = ({ title, description }) => {
 
       if (response.status === 200) {
         toast.dismiss();
-        toast.success("Thank you for contacting us!",{
+        toast.success("Thank you for reaching out!",{
           duration: 3000,
           style: { background: '#22c55e', color: '#fff' }
         });
