@@ -4,17 +4,23 @@ import Image from "next/image";
 import { useTheme } from "../theme-provider/page";
 
 const Profile = () => {
-      const { theme } = useTheme(); 
+  const { theme } = useTheme();
   return (
     <div className="w-full h-full relative">
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 2, duration: 0.4, ease: "easeIn" } }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+        }}
       >
         {/* Profile image */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.5, ease: "easeInOut" } }}
+          animate={{
+            opacity: 1,
+            transition: { delay: 2.4, duration: 0.5, ease: "easeInOut" },
+          }}
           className="w-[298px] h-[298px] xl:w-[420px] xl:h-[420px]  absolute rounded-full overflow-hidden"
         >
           <Image
@@ -35,9 +41,21 @@ const Profile = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor={theme === "dark" ? "#ADFF2F" : "#22c55e"} />
-              <stop offset="100%" stopColor={theme === "dark" ? "#22c55e" : "#16a34a"} />
+            <linearGradient
+              id="circleGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop
+                offset="0%"
+                stopColor={theme === "dark" ? "#ADFF2F" : "#22c55e"}
+              />
+              <stop
+                offset="100%"
+                stopColor={theme === "dark" ? "#22c55e" : "#16a34a"}
+              />
             </linearGradient>
           </defs>
           <motion.circle

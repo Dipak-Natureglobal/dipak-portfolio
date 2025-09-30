@@ -93,6 +93,7 @@ const PostPage = () => {
             width={200}
             height={200}
             className="mb-6"
+            loading="lazy"
           />
           <p className="text-lg">No Data was Found!</p>
         </div>
