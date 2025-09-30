@@ -62,6 +62,7 @@ const HomePage = () => {
                 width={0}
                 height={0}
                 sizes="100vw"
+                loading="lazy"
               />
               <div className="container mx-auto   justify-center items-center xl:flex hidden flex-col  ">
                 <svg

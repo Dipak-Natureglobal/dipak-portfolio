@@ -65,7 +65,7 @@ const EnhancedContactButton = () => {
               className="transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-90"
             />
           ) : (
-            <MessageCircleMore    
+            <MessageCircleMore
               size={38}
               className="transition-opacity duration-300 ease-in-out opacity-100"
             />
@@ -184,13 +184,21 @@ const EnhancedContactButton = () => {
             >
               {/* Welcome Message from Dipak */}
               <div
-                className="flex justify-start mb-4"
+                className="flex justify-start flex-col mb-4 my-2 space-y-2"
                 style={{
                   animation: isWhatsAppChatOpen ? "slideInLeft 0.6s ease-out 0.3s both" : "",
                 }}
               >
                 <div className="bg-white rounded-lg rounded-tl-none p-2 sm:p-3 max-w-[85%] sm:max-w-[80%] shadow-sm">
-                  <p className="text-gray-800 text-sm">Hi! How can I help you?</p>
+                  <p className="text-gray-800 text-xs">Hi! How can I help you? 😄</p>
+                  <div className="text-xs text-gray-500 mt-0 text-right">
+                    {new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                  </div>
+                </div>
+                <div className="bg-white rounded-lg rounded-tl-none p-2 sm:p-3 max-w-[90%] sm:max-w-[85%] shadow-sm">
+                  <p className="text-gray-800 text-xs">I&#39;m open to freelance opportunities, technical consultations, and collaborations.
+                  </p>
+
                   <div className="text-xs text-gray-500 mt-1 text-right">
                     {new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                   </div>

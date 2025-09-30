@@ -286,6 +286,7 @@ const LiveProject = () => {
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         alt={item.title}
+                        loading="lazy"
                       />
                       <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4 z-20">
                         <div className="bg-black/50 backdrop-blur-sm rounded-md md:rounded-lg p-2 md:p-3">
