@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Search, ChevronLeft, ChevronRight, FilterIcon, BookOpen } from "lucide-react";
 import { blogPosts } from "../data";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 
 const PostPage = () => {
@@ -33,56 +34,73 @@ const PostPage = () => {
   };
 
   return (
-    <div className="min-h-screen dark:bg-primary bg-gray-100 py-10 px-4 max-w-7xl mx-auto">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 0.9, duration: 0.6, ease: "easeOut" } }}
+      className="min-h-screen dark:bg-primary bg-gray-100 py-10 px-4 max-w-7xl mx-auto relative"
+    >
+      {/* Background Effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-[#22c55e]/10 to-[#16a34a]/10 dark:from-[#ADFF2F]/10 dark:to-[#22c55e]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-[#16a34a]/10 to-[#22c55e]/10 dark:from-[#22c55e]/10 dark:to-[#ADFF2F]/10 rounded-full blur-3xl"></div>
+      </div>
+
       {/* Header */}
-      <div className="mt-[5rem] mb-10">
-        <h1 className=" text-3xl bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent flex align-middle justify-center font-semibold ">Blog Posts</h1>
+      <div className="mt-[5rem] mb-10 relative">
+        <h1 className="text-3xl bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent flex align-middle justify-center font-semibold">
+          Blog Posts
+        </h1>
       </div>
 
       {/* Filter/Search */}
-      <div className="mb-10 space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <h2 className="text-lg font-semibold text-black/70 dark:text-slate-50">
-            Total Blogs: <span >{blogPosts.length}</span>
-            <span className="flex gap-3 ">
-              <FilterIcon /> Filter by Category
-            </span>
-          </h2>
-          <div className="w-full sm:max-w-xs">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-black/70 dark:text-gray-500" />
-              <input
-                type="text"
-                placeholder="Search blogs..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-3 py-2 w-full border text-black/70 dark:text-slate-50 bg-white dark:bg-[#222227] dark:border-gray-300 border-black/60 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22c55e] dark:focus:ring-[#ADFF2F]"
-              />
-            </div>
-            <span className="block mt-1 text-xs text-gray-500 dark:text-gray-400">
-              Eg: frontend (not case sensitive)
-            </span>
-          </div>
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 0.9, duration: 0.6, ease: "easeOut" } }}
 
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <button
-            onClick={() => setSelectedCategory(null)}
-            className={`px-4 py-1 rounded-full text-sm ${!selectedCategory ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-black/70" : "bg-gray-200 text-black/70"}`}
-          >
-            All
-          </button>
-          {categories.map(cat => (
+      >
+        <div className="mb-10 space-y-4 relative">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <h2 className="text-lg font-semibold text-black/70 dark:text-slate-50">
+              Total Blogs: <span >{blogPosts.length}</span>
+              <span className="flex gap-3 ">
+                <FilterIcon /> Filter by Category
+              </span>
+            </h2>
+            <div className="w-full sm:max-w-xs">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-black/70 dark:text-gray-500" />
+                <input
+                  type="text"
+                  placeholder="Search blogs..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 pr-3 py-2 w-full border text-black/70 dark:text-slate-50 bg-white dark:bg-[#222227] dark:border-gray-300 border-black/60 rounded-md focus:outline-none focus:ring-2 focus:ring-[#22c55e] dark:focus:ring-[#ADFF2F]"
+                />
+              </div>
+              <span className="block mt-1 text-xs text-gray-500 dark:text-gray-400">
+                Eg: frontend (not case sensitive)
+              </span>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2">
             <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-1 rounded-full text-sm ${selectedCategory === cat ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-black/70" : "bg-gray-200 text-black/70"}`}
+              onClick={() => setSelectedCategory(null)}
+              className={`px-4 py-1 rounded-full text-sm transition-all duration-300 ${!selectedCategory ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-black/70" : "bg-gray-200 text-black/70 hover:bg-gray-300"}`}
             >
-              {cat}
+              All
             </button>
-          ))}
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-4 py-1 rounded-full text-sm transition-all duration-300 ${selectedCategory === cat ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-black/70" : "bg-gray-200 text-black/70 hover:bg-gray-300"}`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      </motion.section>
 
       {/* Blog Grid */}
       {currentPosts.length === 0 ? (
@@ -99,9 +117,16 @@ const PostPage = () => {
         </div>
 
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {currentPosts.map(post => (
-            <div key={post.id} className="bg-white dark:bg-[#27272c] rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0, transition: { delay: 0.8, duration: 0.6 } }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {currentPosts.map((post) => (
+            <div
+              key={post.id}
+              className="bg-white dark:bg-[#27272c] rounded-lg overflow-hidden shadow hover:shadow-lg transition-all duration-300"
+            >
               <div className="h-48 overflow-hidden">
                 <Image
                   src={post.coverImage}
@@ -131,16 +156,15 @@ const PostPage = () => {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       )}
 
       {/* Pagination */}
       {filteredPosts.length > postsPerPage && (
         <div className="mt-10 flex justify-center items-center gap-2 flex-wrap">
-
           <button
             onClick={() => handlePageChange(currentPage - 1)}
-            className={`w-10 h-10 flex items-center justify-center rounded-full ${currentPage === 1 ? "bg-gray-300 cursor-not-allowed opacity-50 pointer-events-none" : "bg-gray-200 hover:bg-gray-300"
+            className={`w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 ${currentPage === 1 ? "bg-gray-300 cursor-not-allowed opacity-50 pointer-events-none" : "bg-gray-200 hover:bg-gray-300"
               } text-gray-700`}
           >
             <ChevronLeft size={16} />
@@ -150,7 +174,7 @@ const PostPage = () => {
             <button
               key={i}
               onClick={() => handlePageChange(i + 1)}
-              className={`px-3 py-2 rounded ${currentPage === i + 1 ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white" : "bg-gray-200 hover:bg-gray-300 text-gray-700"}`}
+              className={`px-3 py-2 rounded transition-all duration-300 ${currentPage === i + 1 ? "bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] text-white" : "bg-gray-200 hover:bg-gray-300 text-gray-700"}`}
             >
               {i + 1}
             </button>
@@ -158,14 +182,14 @@ const PostPage = () => {
 
           <button
             onClick={() => handlePageChange(currentPage + 1)}
-            className={`w-10 h-10 flex items-center justify-center rounded-full ${currentPage === totalPages ? "bg-gray-300 cursor-not-allowed opacity-50 pointer-events-none" : "bg-gray-200 hover:bg-gray-300"
+            className={`w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 ${currentPage === totalPages ? "bg-gray-300 cursor-not-allowed opacity-50 pointer-events-none" : "bg-gray-200 hover:bg-gray-300"
               } text-gray-700`}
           >
             <ChevronRight size={16} />
           </button>
         </div>
       )}
-    </div>
+    </motion.section>
   );
 };
 
