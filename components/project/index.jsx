@@ -13,6 +13,22 @@ import WorkSliderBtns from "../../components/ui/WorkSliderBtns"
 const projects = [
   {
     num: '01',
+    title: 'HappyCraft Events – Premium Event Management Website',
+    image: '/assets/project/happycraft.webp',
+    Description: "HappyCraft Events is a professionally crafted website for a leading event management brand in India. Designed to showcase luxury experiences, celebrity-led events, and corporate excellence, the site features a dynamic gallery, service highlights, and a seamless quote request system. Fully responsive and tailored for impact, it reflects the brand’s commitment to creativity, precision, and hospitality.",
+    link: "https://www.happycraftevents.com/",
+
+    stack: [
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/7f3a652dd4e48f795856f28bd56d120bda77c30a-1024x1024.svg", name: "Next.Js" },
+      { link: 'https://cdn.sanity.io/images/pb7fa4md/production/493e4faa34fb971a67bc2c5d3b2bdd4942265c91-512x512.svg', name: "Html 5" },
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/1b272f2930c008c5426d4cccabca34da64207f8e-2500x1504.svg", name: "Tailwind Css" },
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/b80d217fdba8863bedeccfaddea56368ddd333df-2500x2500.svg", name: "Javascript" },
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/0a6af6143e936cedc834d2d5af35987e0e39e94e-2500x2500.svg", name: "Typescript" },
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/8e7b4b2f439239de418e1bc12e0010c93f6e8985-842x595.svg", name: "React" },
+    ]
+  },
+  {
+    num: '02',
     title: 'Evana Electricals',
     image: '/assets/project/evana.webp',
     Description: "Evana Electricals is transforming agriculture and energy solutions in India with our advanced PAWAN agri-drone, offering precision spraying services for more efficient and cost-effective farming. Our DGCA-approved RPTO training equips aspiring pilots for rewarding careers, while our solar panel integration services can cut energy costs by up to 50%.",
@@ -28,7 +44,7 @@ const projects = [
     ]
   },
   {
-    num: '02',
+    num: '03',
     title: 'Dipak | Portfolio',
     image: '/assets/project/portfolio.webp',
     Description: "I created this portfolio to highlight my skills and projects as a software developer. Built with React and Next.js, it’s designed to be fast, responsive, and user-friendly. This project showcases my ability to create clean, intuitive interfaces while managing complex front-end development. It reflects my passion for crafting high-quality digital experiences.",
@@ -42,18 +58,7 @@ const projects = [
 
     ]
   },
-  {
-    num: '03',
-    title: 'Global Weather Tracker - Real-time Updates',
-    image: '/assets/project/weather.webp',
-    Description: "This weather-checking application provides real-time updates on temperature, humidity, and wind speed across different countries and their states. Stay informed about the weather conditions in any location you choose, making it easy to plan your day or travel with confidence. Get accurate, up-to-date information at your fingertips, wherever you are.",
-    link: "https://keen-gaufre-d00d90.netlify.app/",
-    stack: [
-      { link: "https://cdn.sanity.io/images/pb7fa4md/production/493e4faa34fb971a67bc2c5d3b2bdd4942265c91-512x512.svg", name: "Html 5" },
-      { link: "https://cdn.sanity.io/images/pb7fa4md/production/d07e464f75669961f972a28d4701bf5faa6ab4fa-290x410.svg", name: "CSS 3" },
-      { link: "https://cdn.sanity.io/images/pb7fa4md/production/b80d217fdba8863bedeccfaddea56368ddd333df-2500x2500.svg", name: "Javascript" },
-    ]
-  },
+
   {
     num: '04',
     title: 'RMC | Reality Management Software',
@@ -87,6 +92,21 @@ const projects = [
   },
   {
     num: '06',
+    title: ' KET Design – Interior Design Studio Website',
+    image: '/assets/project/ket.webp',
+    Description: "KET Design is a modern, professionally developed website created for a leading interior design studio based in Kolkata. It includes key features like an appointment booking system and a cost calculator to help users estimate interior design expenses. The site is fully responsive and tailored to showcase the studio’s offerings and client-centric approach.",
+    link: "https://ketdesign.in/",
+    stack: [
+
+      { link: 'https://cdn.sanity.io/images/pb7fa4md/production/493e4faa34fb971a67bc2c5d3b2bdd4942265c91-512x512.svg', name: "Html 5" },
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/1b272f2930c008c5426d4cccabca34da64207f8e-2500x1504.svg", name: "Tailwind Css" },
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/b80d217fdba8863bedeccfaddea56368ddd333df-2500x2500.svg", name: "Javascript" },
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/0a6af6143e936cedc834d2d5af35987e0e39e94e-2500x2500.svg", name: "Typescript" },
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/7f3a652dd4e48f795856f28bd56d120bda77c30a-1024x1024.svg", name: "Next.Js" }
+    ]
+  },
+  {
+    num: '07',
     title: 'MNSR | Workforce Management System',
     image: '/assets/project/mnsr.webp',
     Description: "A comprehensive solution for tracking attendance, managing manpower, and streamlining employee operations with real-time location-based login/logout, leave tracking, and salary management.",
@@ -102,7 +122,7 @@ const projects = [
     ]
   },
   {
-    num: '07',
+    num: '08',
     title: ' InsightPress - Share Your Thoughts.',
     image: '/assets/project/insight-press.webp',
     Description: "InsightPress is a news platform where users can search for the latest news, log in with Google, and engage in public discussions. Users can comment on articles, reply to others, and be part of a community that values open dialogue and shared perspectives.",
@@ -118,23 +138,19 @@ const projects = [
     ]
   },
   {
-    num: '08',
-    title: ' KET Design – Interior Design Studio Website',
-    image: '/assets/project/ket.webp',
-    Description: "KET Design is a modern, professionally developed website created for a leading interior design studio based in Kolkata. It includes key features like an appointment booking system and a cost calculator to help users estimate interior design expenses. The site is fully responsive and tailored to showcase the studio’s offerings and client-centric approach.",
-    link: "https://ketdesign.in/",
-    stack: [
-
-      { link: 'https://cdn.sanity.io/images/pb7fa4md/production/493e4faa34fb971a67bc2c5d3b2bdd4942265c91-512x512.svg', name: "Html 5" },
-      { link: "https://cdn.sanity.io/images/pb7fa4md/production/1b272f2930c008c5426d4cccabca34da64207f8e-2500x1504.svg", name: "Tailwind Css" },
-      { link: "https://cdn.sanity.io/images/pb7fa4md/production/b80d217fdba8863bedeccfaddea56368ddd333df-2500x2500.svg", name: "Javascript" },
-      { link: "https://cdn.sanity.io/images/pb7fa4md/production/0a6af6143e936cedc834d2d5af35987e0e39e94e-2500x2500.svg", name: "Typescript" },
-      { link: "https://cdn.sanity.io/images/pb7fa4md/production/7f3a652dd4e48f795856f28bd56d120bda77c30a-1024x1024.svg", name: "Next.Js" }
-    ]
-  }
-  ,
-  {
     num: '09',
+    title: 'Global Weather Tracker - Real-time Updates',
+    image: '/assets/project/weather.webp',
+    Description: "This weather-checking application provides real-time updates on temperature, humidity, and wind speed across different countries and their states. Stay informed about the weather conditions in any location you choose, making it easy to plan your day or travel with confidence. Get accurate, up-to-date information at your fingertips, wherever you are.",
+    link: "https://keen-gaufre-d00d90.netlify.app/",
+    stack: [
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/493e4faa34fb971a67bc2c5d3b2bdd4942265c91-512x512.svg", name: "Html 5" },
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/d07e464f75669961f972a28d4701bf5faa6ab4fa-290x410.svg", name: "CSS 3" },
+      { link: "https://cdn.sanity.io/images/pb7fa4md/production/b80d217fdba8863bedeccfaddea56368ddd333df-2500x2500.svg", name: "Javascript" },
+    ]
+  },
+  {
+    num: '10',
     title: ' TextUtils - Analyze and Enhance Your Text Effortlessly',
     image: '/assets/project/textutils.webp',
     Description: "TextUtils is a simple and user-friendly tool designed to help you analyze your text quickly. Get insights like word count, character count, and estimated reading time. Additionally, preview your text instantly and enable dark mode for a more comfortable reading experience.",
