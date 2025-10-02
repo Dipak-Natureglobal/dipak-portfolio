@@ -107,7 +107,7 @@ const HomePage = () => {
           <div className=" flex flex-col  xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
             <div className="text-center  xl:text-left order-2 xl:order-none">
               <p className="max-w-[610px] mb-6 dark:text-white/80 text-black/70 text-left xl:ml-0 ml-4">
-                Hi, I am Dipak Mourya, a passionate Software Developer with over a year of experience in real-time projects. I continuously evolve my skills and embrace new technologies. With a degree in Computer Science Engineering, I enhance my efficiency in software development. Currently, I&#39;m pursuing an <span className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent font-bold"> Master of Business Administration (MBA)</span> in Business Analytics, merging my technical expertise with business insight for impactful results.
+                Hi, I’m Dipak Mourya, a passionate Software Developer with hands-on experience in real-time projects and a strong focus on building scalable, efficient solutions. I continuously evolve my skills and embrace new technologies. With a degree in Computer Science Engineering, I enhance my efficiency in software development. Currently, I&#39;m pursuing an <span className="bg-gradient-to-r from-[#22c55e] to-[#16a34a] dark:from-[#ADFF2F] dark:to-[#22c55e] bg-clip-text text-transparent font-bold"> Master of Business Administration (MBA)</span> in Business Analytics, merging my technical expertise with business insight for impactful results.
               </p>
               <div className=" gap-2 xl:flex hidden">
                 <Link href='/about' >
