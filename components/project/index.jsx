@@ -13,10 +13,10 @@ import WorkSliderBtns from "../../components/ui/WorkSliderBtns"
 const projects = [
   {
     num: '01',
-    title: 'HappyCraft Events – Premium Event Management Website',
+    title: 'HappyCraft Event LLP – Premium Event Management Website',
     image: '/assets/project/happycraft.webp',
-    Description: "HappyCraft Events is a professionally crafted website for a leading event management brand in India. Designed to showcase luxury experiences, celebrity-led events, and corporate excellence, the site features a dynamic gallery, service highlights, and a seamless quote request system. Fully responsive and tailored for impact, it reflects the brand’s commitment to creativity, precision, and hospitality.",
-    link: "https://www.happycraftevents.com/",
+    Description: "HappyCraft Event LLP is a professionally crafted website for a leading event management brand in India. Designed to showcase luxury experiences, celebrity-led events, and corporate excellence, the site features a dynamic gallery, service highlights, and a seamless quote request system. Fully responsive and tailored for impact, it reflects the brand’s commitment to creativity, precision, and hospitality.",
+    link: "https://www.happycraftevent.in/",
 
     stack: [
       { link: "https://cdn.sanity.io/images/pb7fa4md/production/7f3a652dd4e48f795856f28bd56d120bda77c30a-1024x1024.svg", name: "Next.Js" },
